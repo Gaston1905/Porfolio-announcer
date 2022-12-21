@@ -1,0 +1,22 @@
+button{
+  color: #04ff00;
+  border: 1px solid #04ff00;
+}
+
+button:hover {
+  background-color: #04ff007a;
+}
+
+svg {
+  color: red;
+  filter: drop-shadow(0 0 5px rgb(255, 0, 0));
+}
+
+svg:hover {
+  color: rgb(146, 0, 0);
+}
+
+img {
+  filter: hue-rotate(-80deg);
+}
+
