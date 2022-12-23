@@ -11,6 +11,7 @@ import { FormContactComponent } from './components/form-contact/form-contact.com
 import { FooterComponent } from './components/footer/footer.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HeroComponent,
     ProjectsComponent,
     FormContactComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
