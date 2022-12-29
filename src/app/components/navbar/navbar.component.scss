@@ -1,11 +1,19 @@
 a,
 hr {
-  color: #04ff00;
+  color: #e7eb00;
 }
 
 a:active,
 a:hover {
   color: white;
+}
+
+.container {
+  margin: -2.5em 0 2.3em 0;
+}
+
+svg {
+  filter: drop-shadow(0 0 1.5px rgb(224, 236, 1));
 }
 
 

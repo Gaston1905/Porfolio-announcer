@@ -2,9 +2,10 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 
 body {
-  background-color: #1a1a1a;
+  background: linear-gradient(to right, #1a1a1a 50%,  #e4e803 50%);
   font-family: roboto-serif;
   letter-spacing: .1rem;
+  cursor: url(./assets/microphone-24.ico), context-menu;
 }
 
 h1,
@@ -15,5 +16,5 @@ label,
 hr,
 svg,
 p {
-  color: #04ff00;
+  color: #e7eb00;
 }

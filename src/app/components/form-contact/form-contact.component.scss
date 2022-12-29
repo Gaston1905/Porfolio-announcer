@@ -1,6 +1,6 @@
 button{
-  color: #04ff00;
-  border: 1px solid #04ff00;
+  color: #e7eb00;
+  border: 1px solid #e7eb00;
 }
 
 button:hover {
@@ -9,6 +9,10 @@ button:hover {
 
 input,
 textarea {
-  border: 1px solid #04ff00;
+  border: 1px solid #e7eb00;
   border-top: none;
+}
+
+#contact-nav {
+  margin-bottom: -6em;
 }

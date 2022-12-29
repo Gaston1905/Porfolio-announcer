@@ -17,6 +17,26 @@ svg:hover {
 }
 
 img {
-  filter: hue-rotate(-80deg);
+
+filter: grayscale(100%);
 }
+
+#border-video {
+  border-bottom: 4px solid #e7eb00;
+  border-left: 1px solid #e7eb00;
+  filter: drop-shadow(-2px 2px 2px rgb(224, 236, 1));
+}
+
+#background-title {
+  background-color: #1a1a1a;
+  border-bottom: 4px solid #e7eb00;
+  filter: drop-shadow(-2px 2px 2px rgb(224, 236, 1));
+}
+
+
+#background-subtitle {
+  border-bottom: 4px solid #e7eb00;
+  filter: drop-shadow(-2px 2px 2px rgb(224, 236, 1));
+}
+
 
