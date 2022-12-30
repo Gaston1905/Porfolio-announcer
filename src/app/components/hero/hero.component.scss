@@ -1,23 +1,31 @@
 button{
-  color: #04ff00;
-  border: 1px solid #04ff00;
+  color: #e7eb00;
 }
 
 button:hover {
-  background-color: #04ff007a;
+  color: #e7eb00;
+  filter: drop-shadow(0 0 2px rgb(224, 236, 1));
 }
 
 svg {
+  color: #e7eb00;
+}
+
+svg:hover {
+  color: #e7eb00;
+  filter: drop-shadow(0 0 2px rgb(224, 236, 1));
+}
+
+#btn-play {
   color: red;
   filter: drop-shadow(0 0 5px rgb(255, 0, 0));
 }
 
-svg:hover {
+#btn-play:hover {
   color: rgb(146, 0, 0);
 }
 
 img {
-
 filter: grayscale(100%);
 }
 
@@ -38,5 +46,16 @@ filter: grayscale(100%);
   border-bottom: 4px solid #e7eb00;
   filter: drop-shadow(-2px 2px 2px rgb(224, 236, 1));
 }
+
+.container {
+  margin: -2.5em 0 2.3em 0;
+}
+
+svg {
+  filter: drop-shadow(0 0 1.5px rgb(224, 236, 1));
+}
+
+
+
 
 
