@@ -1,11 +1,9 @@
+<span #up></span>
 <app-contact-nav></app-contact-nav>
 
 <div class="container rounded" id="landing">
-
-
-
   <router-outlet></router-outlet>
-
+  <app-button-up (click)='scroll(up)' id="button-up-position"></app-button-up>
   <app-footer></app-footer>
-
 </div>
+

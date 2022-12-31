@@ -15,21 +15,21 @@
 
   <div class="d-flex justify-content-center">
     <div class="rounded px-4">
-      <form>
+      <form [formGroup]="form">
         <h4 class="title">CONTACTO</h4>
         <p class="description fst-italic">No dudes en contactarme si necesitas ayuda u otra pregunta</p>
         <div>
 
-          <input type="text" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" id="name" placeholder="Nombre" required>
+          <input type="text" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="name" id="name" placeholder="Nombre" required>
         </div>
         <div>
-          <input type="email" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" placeholder="Email@example.com" required>
+          <input type="email" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="email" placeholder="Email@example.com" required>
         </div>
         <div>
-          <textarea id="message" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-text-area" rows="5" cols="30" placeholder="Mensaje" required></textarea>
+          <textarea id="message" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-text-area" rows="5" cols="30" formControlName="message" placeholder="Mensaje" required></textarea>
         </div>
         <div>
-          <button type="submit" class="btn">Enviar</button>
+          <button type="submit" class="btn" (click)="contactData()">Enviar</button>
         </div>
       </form>
     </div>

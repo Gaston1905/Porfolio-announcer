@@ -1,4 +1,7 @@
+import { ContactForm } from './../../model/contactForm.interface';
+import { ContactService } from './../../services/contact.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-contact',
@@ -7,9 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormContactComponent implements OnInit {
 
-  constructor() { }
+  form!: FormGroup;
 
-  ngOnInit(): void {
+  constructor( private formBuilder: FormBuilder,
+               private contactSVC: ContactService
+              ) {
+
+                this.form = this.formBuilder.group({
+                  name: new FormControl('', Validators.required),
+                  email: new FormControl('', [Validators.required, Validators.email]),
+                  message: new FormControl('', Validators.required)
+                })
+
+               }
+
+  ngOnInit(): void { }
+
+  contactData() {
+
+    const contactData: ContactForm = this.form.value;
+    console.log(contactData)
+    if(this.form.invalid) {
+      this.contactSVC.sendContactForm(contactData).subscribe((data) => {
+        console.log(data)
+          this.form.reset();
+      })
+    }
   }
 
 }
