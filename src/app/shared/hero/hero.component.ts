@@ -12,7 +12,7 @@ export class HeroComponent implements OnInit {
     el.scrollIntoView()
   }
 
-  constructor( private translate: TranslateService) {
+  constructor( private translate: TranslateService ) {
     translate.setDefaultLang('es');
   }
 
