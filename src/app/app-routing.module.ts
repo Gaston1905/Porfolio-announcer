@@ -1,4 +1,4 @@
-import { HeroComponent } from './components/hero/hero.component';
+import { HeroComponent } from './shared/hero/hero.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';

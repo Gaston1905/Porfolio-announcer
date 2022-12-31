@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
@@ -11,7 +12,9 @@ export class HeroComponent implements OnInit {
     el.scrollIntoView()
   }
 
-  constructor() { }
+  constructor( private translate: TranslateService) {
+    translate.setDefaultLang('es');
+  }
 
   ngOnInit(): void {
   }
