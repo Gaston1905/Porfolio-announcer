@@ -12,13 +12,8 @@ import { FormContactComponent } from './form-contact/form-contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
-  declarations: [
-
-    FormContactComponent,
-    ProjectsComponent,
-  ],
+  declarations: [FormContactComponent, ProjectsComponent],
   imports: [
     CommonModule,
     CarrouselModule,
@@ -26,11 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     HttpClientModule,
     LanguageModule,
-    TranslateModule
+    TranslateModule,
   ],
-  exports: [
-    FormContactComponent,
-    ProjectsComponent,
-  ]
+  exports: [FormContactComponent, ProjectsComponent],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

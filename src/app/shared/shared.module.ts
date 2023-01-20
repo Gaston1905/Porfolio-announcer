@@ -8,26 +8,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageModule } from '../language/language.module';
 
-
-
 @NgModule({
   declarations: [
     HeroComponent,
     FooterComponent,
     ContactNavComponent,
-    ButtonUpComponent
+    ButtonUpComponent,
   ],
-  imports: [
-    CommonModule,
-    ComponentsModule,
-    LanguageModule,
-    TranslateModule
-  ],
+  imports: [CommonModule, ComponentsModule, LanguageModule, TranslateModule],
   exports: [
     HeroComponent,
     FooterComponent,
     ContactNavComponent,
-    ButtonUpComponent
-  ]
+    ButtonUpComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

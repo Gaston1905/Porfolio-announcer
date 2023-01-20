@@ -4,19 +4,16 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss']
+  styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
-
-  scroll(el:HTMLElement){
-    el.scrollIntoView()
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
   }
 
-  constructor( private translate: TranslateService ) {
+  constructor(private translate: TranslateService) {
     translate.setDefaultLang('es');
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

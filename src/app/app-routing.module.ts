@@ -3,12 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HeroComponent } from './shared/hero/hero.component';
 
-const routes: Routes = [
-  { path: 'home', component: HeroComponent }
-];
+const routes: Routes = [{ path: 'home', component: HeroComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
