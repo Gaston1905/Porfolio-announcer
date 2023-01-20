@@ -7,6 +7,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
+  showVideo: boolean = false;
+
   scroll(el: HTMLElement) {
     el.scrollIntoView();
   }
@@ -15,5 +17,7 @@ export class HeroComponent implements OnInit {
     translate.setDefaultLang('es');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.showVideo);
+  }
 }
