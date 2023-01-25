@@ -1,11 +1,13 @@
-svg {
-  margin: .5em 0 .5em 0;
+svg,
+i {
+  font-size: 2em;
+  margin: 0.5em 0 0.5em 0;
   filter: drop-shadow(0 1px 4px #000000);
-
 }
 
-svg:hover {
-  color:white;
+svg:hover,
+i:hover {
+  color: white;
 }
 
 #background {

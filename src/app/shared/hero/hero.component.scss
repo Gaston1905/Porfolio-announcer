@@ -7,12 +7,15 @@ button:hover {
   filter: drop-shadow(0 0 2px rgb(224, 236, 1));
 }
 
-svg {
+svg,
+i {
+  font-size: 16px;
   color: #e7eb00;
-  filter: drop-shadow(0 0 1.5px rgb(224, 236, 1));
+  filter: drop-shadow(0 0 0.6px rgb(224, 236, 1));
 }
 
-svg:hover {
+svg:hover,
+i:hover {
   color: #e7eb00;
   filter: drop-shadow(0 0 2px rgb(224, 236, 1));
 }
