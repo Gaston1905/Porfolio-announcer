@@ -1,35 +1,56 @@
-<div
-  class="pe-4"
-  id="form-contact-name"
-  data-aos="zoom-in"
-  data-aos-duration="1000"
-  data-aos-easing="ease-in-sine"
-  data-aos-mirror="true"
-  data-aos-once="false"
->
+<div class="pe-4" id="form-contact-name" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-sine"
+  data-aos-mirror="true" data-aos-once="false">
   <p class="display-5 fs-1 text-end"><span class="rounded p-2" id="background-name">Francisco Escobar</span></p>
 </div>
 
-<div class="pb-5 mb-4">
+<div class="pb-5 mb-4" id="form-query">
 
 
   <div class="d-flex justify-content-center">
     <div class="rounded px-4">
       <form [formGroup]="form">
         <h4 class="title">{{ 'CONTACTO' | translate }}</h4>
-        <p class="description fst-italic">{{ 'No dudes en contactarme si necesitas ayuda u otra pregunta' | translate}}</p>
+        <p class="description fst-italic">{{ 'No dudes en contactarme si necesitas ayuda u otra pregunta' | translate}}
+        </p>
         <div>
 
-          <input type="text" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="name" id="name" placeholder="{{ 'Nombre' | translate }}" required>
+          <input type="text" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input"
+            formControlName="name" id="name" placeholder="{{ 'Nombre' | translate }}" required>
         </div>
         <div>
-          <input type="email" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="email" placeholder="Email@example.com" required>
+          <input type="email" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input"
+            formControlName="email" placeholder="Email@example.com" required>
         </div>
         <div>
-          <textarea id="message" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-text-area" rows="5" cols="30" formControlName="message" placeholder="{{ 'Mensaje' | translate }}" required></textarea>
+          <textarea id="message" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-text-area" rows="5"
+            cols="30" formControlName="message" placeholder="{{ 'Mensaje' | translate }}" required></textarea>
         </div>
-        <div>
-          <button type="submit" class="btn" (click)="contactData()">{{ 'Enviar' | translate }}</button>
+        <div class="flex d-flex gap-4">
+          <div>
+            <button type="submit" class="btn" (click)="contactData()">{{ 'Enviar' | translate }}</button>
+          </div>
+          <div class="row " id="social-media-form">
+            <div class="col-md-3 mt-1">
+              <a href="#">
+                <i class="bi bi-linkedin" id="icon-social-media-form1"></i>
+              </a>
+            </div>
+            <div class="col-md-3 mt-1">
+              <a href="#">
+                <i class="bi bi-instagram" id="icon-social-media-form1"></i>
+              </a>
+            </div>
+            <div class="col-md-3 mt-1">
+              <a href="#">
+                <i class="bi bi-facebook" id="icon-social-media-form1"></i>
+              </a>
+            </div>
+            <div class="col-md-3" id="margin-icon-query">
+              <a href="#">
+                <i class="bi bi-youtube" id="icon-social-media-form2"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </form>
     </div>

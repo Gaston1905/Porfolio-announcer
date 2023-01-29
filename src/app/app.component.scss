@@ -5,6 +5,15 @@
 
 #button-up-position {
   position: fixed;
-  top: 85%;
-  right: 2em;
+  top: 80%;
+  right: 6.2em;
+}
+
+/* --------  MEDIA QUERY  -------- */
+
+@media (max-width: 768px) {
+  #button-up-position {
+    top: 80%;
+    right: 3em;
+  }
 }

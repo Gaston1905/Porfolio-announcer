@@ -1,4 +1,4 @@
-button{
+button {
   color: #e7eb00;
   border: 1px solid #e7eb00;
 }
@@ -22,8 +22,48 @@ textarea:focus {
 
 #background-name {
   background-color: #e7eb00;
-  text-shadow: 0 0  4px #000000;
+  text-shadow: 0 0 4px #000000;
 }
 
+/* ---------  MEDIA QUERY  ------------ */
 
+@media (max-width: 768px) {
+  #background-name {
+    margin-right: 3.5em;
+    font-size: 0.7em;
+    text-shadow: 0 0 2.5px #000000;
+    background-color: #1a1a1a;
+    border: 1px solid #e7eb00;
+  }
+}
 
+@media (max-width: 768px) {
+  #form-query {
+    margin-bottom: 0 !important;
+    padding-bottom: 2em !important;
+  }
+}
+
+@media (min-width: 836px) {
+  #social-media-form {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 836px) {
+  #icon-social-media-form1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 836px) {
+  #icon-social-media-form2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 836px) {
+  #margin-icon-query {
+    margin-top: 0.13em;
+  }
+}
