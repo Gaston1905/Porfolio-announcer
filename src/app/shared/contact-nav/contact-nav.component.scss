@@ -11,8 +11,16 @@ i:hover {
 }
 
 #background {
+  display: flex;
+  flex-direction: column;
   background-color: #e7eb00;
   width: 3em;
   position: fixed;
   top: 34.1%;
+}
+
+@media (max-width: 836px) {
+  #background {
+    visibility: hidden;
+  }
 }

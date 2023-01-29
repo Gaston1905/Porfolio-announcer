@@ -1,0 +1,9 @@
+/* ---------  MEDIA QUERY  ---------- */
+
+@media (max-width: 768px) {
+  .row {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
