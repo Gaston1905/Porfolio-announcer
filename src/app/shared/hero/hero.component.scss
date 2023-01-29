@@ -68,6 +68,18 @@ img {
   }
 }
 
+@media (max-width: 1440px) {
+  #language-selector {
+    margin-left: 4em;
+  }
+}
+
+@media (max-width: 1024px) {
+  #language-selector {
+    margin-left: 0.5em;
+  }
+}
+
 @media (max-width: 768px) {
   #language-selector {
     margin-left: -2.2em;
@@ -84,5 +96,23 @@ img {
   #social-media-query {
     position: absolute;
     margin-top: -3em;
+  }
+}
+
+@media (max-width: 1440px) {
+  #name-header {
+    margin-left: -807px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  #name-header {
+    margin-left: -550px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #name-header {
+    margin-left: 0 !important;
   }
 }
