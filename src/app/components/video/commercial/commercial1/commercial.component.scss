@@ -1,0 +1,12 @@
+.video-container {
+  width: 100%;
+  padding-bottom: 56.25%; // esto es para mantener el aspect ratio de 16:9
+}
+
+.youtube-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
