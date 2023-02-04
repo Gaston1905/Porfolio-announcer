@@ -7,6 +7,9 @@ import { FooterComponent } from './footer/footer.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageModule } from '../language/language.module';
+import { LoadingComponent } from './loading/loading.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,22 @@ import { LanguageModule } from '../language/language.module';
     FooterComponent,
     ContactNavComponent,
     ButtonUpComponent,
+    LoadingComponent,
   ],
-  imports: [CommonModule, ComponentsModule, LanguageModule, TranslateModule],
+  imports: [
+    CommonModule,
+    ComponentsModule,
+    LanguageModule,
+    TranslateModule,
+    HttpClientModule,
+    AngularSvgIconModule.forRoot(),
+  ],
   exports: [
     HeroComponent,
     FooterComponent,
     ContactNavComponent,
     ButtonUpComponent,
+    LoadingComponent,
   ],
 })
 export class SharedModule {}

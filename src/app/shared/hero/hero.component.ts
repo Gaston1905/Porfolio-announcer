@@ -17,7 +17,5 @@ export class HeroComponent implements OnInit {
     translate.setDefaultLang('es');
   }
 
-  ngOnInit(): void {
-    console.log(this.showVideo);
-  }
+  ngOnInit(): void {}
 }

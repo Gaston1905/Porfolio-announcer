@@ -1,7 +1,8 @@
 <span #up></span>
 <app-contact-nav></app-contact-nav>
 
-<div class="container rounded" id="landing">
+<div class=" rounded" id="landing">
+  <app-loading class="loading-global" [ngClass]="{'hidden': !showLoading}" *ngIf="showLoading"></app-loading>
   <router-outlet></router-outlet>
-  <app-button-up (click)='scroll(up)' id="button-up-position"></app-button-up>
+  <app-button-up (click)='scrollTemplate(up)' id="button-up-position"></app-button-up>
 </div>

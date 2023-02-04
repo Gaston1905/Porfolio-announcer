@@ -21,6 +21,7 @@
     "@angular/youtube-player": "^15.0.3",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "angular-svg-icon": "^15.0.0",
     "aos": "^2.3.4",
     "bootstrap-icons": "^1.10.2",
     "rxjs": "~7.5.0",

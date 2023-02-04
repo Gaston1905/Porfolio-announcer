@@ -1,9 +1,13 @@
-svg {
-  color: #e7eb00;
-  filter: drop-shadow(0 0 1.5px rgb(224, 236, 1));
-}
-
 button:hover {
   color: #e7eb00;
   filter: drop-shadow(0 0 2px rgb(224, 236, 1));
+}
+
+/*------MEDIA QUERY------*/
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  p {
+    font-size: 30px;
+    margin-top: -70px;
+  }
 }

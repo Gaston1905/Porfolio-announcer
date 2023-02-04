@@ -1,0 +1,32 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1a1a1a;
+  z-index: 9999;
+}
+
+#icon-mic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  transform: translate(-50%, -50%);
+  fill: black;
+}
+
+@keyframes fill-up {
+  from {
+    fill: black;
+  }
+  to {
+    fill: #e7eb00;
+  }
+}
+
+.fill-animation {
+  animation: fill-up 7s ease-in-out forwards;
+  filter: drop-shadow(-2px 2px 2px rgb(224, 236, 1));
+}
