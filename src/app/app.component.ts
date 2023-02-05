@@ -8,6 +8,7 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   @ViewChild('up', { static: false }) up: ElementRef | undefined;
   public showLoading: boolean;
+  public fadeState = 'out';
 
   constructor() {
     this.showLoading = false;

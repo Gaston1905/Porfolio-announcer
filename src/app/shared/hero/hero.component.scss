@@ -33,20 +33,9 @@ img {
   filter: grayscale(100%);
 }
 
-#border-video {
+.border-video {
   border-bottom: 4px solid #e7eb00;
   border-left: 1px solid #e7eb00;
-  filter: drop-shadow(-2px 2px 2px rgb(224, 236, 1));
-}
-
-#background-title {
-  background-color: #1a1a1a;
-  border-bottom: 4px solid #e7eb00;
-  filter: drop-shadow(-2px 2px 2px rgb(224, 236, 1));
-}
-
-#background-subtitle {
-  border-bottom: 4px solid #e7eb00;
   filter: drop-shadow(-2px 2px 2px rgb(224, 236, 1));
 }
 
@@ -71,7 +60,7 @@ img {
 }
 
 @media (min-width: 2560px) and (max-width: 3000px) {
-  #video-hero {
+  .video-hero {
     margin-right: 20px;
   }
 }
@@ -85,6 +74,12 @@ img {
 @media (min-width: 2560px) and (max-width: 3000px) {
   #subtitle-hero {
     font-size: 36px;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  video {
+    width: 1298px;
   }
 }
 

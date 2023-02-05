@@ -67,23 +67,25 @@
   <div class="row mb-4 align-items-center flex-lg-row-reverse">
     <div class="col-md-6 col-xl-7 mb-4 mb-lg-0 ">
       <!-- requires glightbox, please flag the option in the picostrap customizer panel-->
-
-      <div class="lc-block position-relative rounded" id="border-video" [style.display]="showVideo ? 'block' : 'none'"
-        id="video-hero">
-        <video controls width="625">
-          <source src="../../../assets/video/video.mp4" type="video/mp4">
+      <div class="lc-block position-relative rounded video-hero border-video"
+        [style.display]="showVideo ? 'block' : 'none'">
+        <video #videoElement controls width="625" (load)="video.play()" [src]="video.src">
+          <source type="video/mp4">
         </video>
       </div>
 
-      <div class="lc-block position-relative rounded" id="border-video" [style.display]="showVideo ? 'none' : 'block'"
-        id="video-hero">
+
+      <div class="lc-block position-relative rounded video-hero border-video"
+        [style.display]="showVideo ? 'none' : 'block'">
         <img class="img-fluid rounded shadow"
           src="https://images.unsplash.com/photo-1621947081720-86970823b77a?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3840&amp;q=80">
 
         <i class="bi bi-play-circle-fill position-absolute top-50 start-50 translate-middle glightbox d-flex justify-content-center align-items-center"
-          id="btn-play" style="font-size: 5em;" (click)="showVideo = true"></i>
+          id="btn-play" style="font-size: 5em;" (click)="showVideo = true" (click)="play()"></i>
       </div>
     </div><!-- /col -->
+
+
     <div class="col-md-6 col-xl-5">
       <div class="lc-block mb-3">
         <div editable="rich">

@@ -27,6 +27,13 @@
   }
 }
 
+@media (min-width: 2560px) and (max-width: 3000px) {
+  #button-up-position {
+    top: 80%;
+    right: 11em;
+  }
+}
+
 @media (min-width: 1440px) and (max-width: 2559px) {
   #landing {
     width: 90%;

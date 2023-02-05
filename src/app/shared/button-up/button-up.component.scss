@@ -7,3 +7,11 @@
   font-size: 1.2em;
   filter: drop-shadow(0 0 4px #000000a2);
 }
+
+/*--------MEDIA QUERY--------*/
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  .bi {
+    font-size: 3.5em;
+  }
+}

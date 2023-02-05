@@ -1,3 +1,27 @@
+section {
+  width: 90%;
+}
+
 i {
   font-size: 1.5em;
+}
+
+/*----------MEDIA QUERY-------------*/
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  hr {
+    border: 2px solid;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  #font-footer-query {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  i {
+    font-size: 2em;
+  }
 }

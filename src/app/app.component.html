@@ -2,7 +2,7 @@
 <app-contact-nav></app-contact-nav>
 
 <div class=" rounded" id="landing">
-  <app-loading class="loading-global" [ngClass]="{'hidden': !showLoading}" *ngIf="showLoading"></app-loading>
+  <app-loading *ngIf="showLoading" class="loading-global" [@fadeOut]="fadeState"></app-loading>
   <router-outlet></router-outlet>
   <app-button-up (click)='scrollTemplate(up)' id="button-up-position"></app-button-up>
 </div>

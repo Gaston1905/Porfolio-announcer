@@ -19,8 +19,24 @@ i:hover {
   top: 34.1%;
 }
 
+/*---------- MEDIA QUERY --------------*/
+
 @media (max-width: 836px) {
   #background {
-    visibility: hidden;
+    display: none;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  #background {
+    top: 445px;
+    width: 5em;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  svg,
+  i {
+    font-size: 3.5em;
   }
 }
