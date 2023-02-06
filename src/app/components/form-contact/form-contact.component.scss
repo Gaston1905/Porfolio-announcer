@@ -1,17 +1,17 @@
 button {
-  color: #e7eb00;
-  border: 1px solid #e7eb00;
+  color: white;
+  border: 1px solid white;
 }
 
 button:hover {
-  color: #e7eb00;
-  border: 1px solid #e7eb00;
+  color: white;
+  border: 1px solid white;
   filter: drop-shadow(0 0 2px rgb(224, 236, 1));
 }
 
 input,
 textarea {
-  border: 1px solid #e7eb00;
+  border: 1px solid white;
   border-top: none;
 }
 
@@ -21,8 +21,9 @@ textarea:focus {
 }
 
 #background-name {
-  background-color: #e7eb00;
+  background-color: #e9b827;
   text-shadow: 0 0 4px #000000;
+  color: #e9b827;
 }
 
 /* ---------  MEDIA QUERY  ------------ */

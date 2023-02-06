@@ -1,7 +1,7 @@
-<div class="container py-5 overflow-hidden">
-  <h2 class="py-5 text-center" #idioms>{{ 'LOCUCIONES' | translate}}</h2>
+<div class="container-fluid px-4 py-5 overflow-hidden">
+  <h2 class="py-5 text-center" #idioms id="title-section">{{ 'LOCUCIONES' | translate}}</h2>
 
-  <div class="row g-0">
+  <div class="row g-0" id="separation-categories">
 
     <div lc-helper="background" class="col-lg-6 order-lg-2">
       <app-carrousel-commercial></app-carrousel-commercial>
@@ -9,8 +9,9 @@
     <div class="col-lg-6 order-lg-1 my-auto px-5 py-5">
       <div class="lc-block">
         <div editable="rich">
-          <h3>{{ 'Comercial' | translate }} | {{ 'Marcas' | translate }}</h3>
-          <p class="lead fst-italic fs-6">Convencer al público a elegir su producto o servicio es parte del trabajo del
+          <h3 class="title-categories">{{ 'Comercial' | translate }} | {{ 'Marcas' | translate }}</h3>
+          <p class="lead fst-italic" id="title-description">Convencer al público a elegir su producto o servicio es
+            parte del trabajo del
             locutor. Es el primer vendedor de la
             cadena. La eficacia de un buen comercial está en conectar los valores y cualidades del producto/servicio y
             el
@@ -20,17 +21,17 @@
     </div>
   </div>
 
-  <div class="row g-0">
-    <div lc-helper="background" class="col-lg-6"
-      style="min-height: 45vh; background-size: cover;background-position: center;">
+  <div class="row g-0" id="separation-categories">
+    <div lc-helper="background" class="col-lg-6">
       <app-carrousel-dubbing></app-carrousel-dubbing>
 
     </div>
     <div class="col-lg-6 my-auto px-5 py-5">
       <div class="lc-block">
         <div editable="rich">
-          <h3>{{ 'Doblaje' | translate }} | {{ 'Neutro' | translate }} - Rioplatense </h3>
-          <p class="lead fst-italic fs-6">Cuando nos dirigimos a toda América latina y/o las comunidades latinas en
+          <h3 class="title-categories">{{ 'Doblaje' | translate }} | {{ 'Neutro' | translate }} - Rioplatense </h3>
+          <p class="lead fst-italic" id="title-description">Cuando nos dirigimos a toda América latina y/o las
+            comunidades latinas en
             países no hispanos, debemos comunicar
             versátilmente a gente de distintos países. Un experto en Español Neutro es la decisión acertada.</p>
         </div>
@@ -39,17 +40,17 @@
     </div>
   </div>
 
-  <div class="row g-0">
-    <div lc-helper="background" class="col-lg-6 order-lg-2 "
-      style="min-height: 45vh; background-size: cover;background-position: center;">
+  <div class="row g-0" id="separation-categories">
+    <div lc-helper="background" class="col-lg-6 order-lg-2 ">
       <app-carrousel-intitutional></app-carrousel-intitutional>
 
     </div>
     <div class="col-lg-6 order-lg-1 my-auto px-5 py-5">
       <div class="lc-block">
         <div editable="rich">
-          <h3>{{ 'Institucionales' | translate }}</h3>
-          <p class="lead fst-italic fs-6">La importancia de estas piezas comunicacionales radica en el cómo el público y
+          <h3 class="title-categories">{{ 'Institucionales' | translate }}</h3>
+          <p class="lead fst-italic" id="title-description">La importancia de estas piezas comunicacionales radica
+            en el cómo el público y
             potenciales inversionistas o clientes
             perciben a la empresa u organización. Por eso, una voz versátil que sea capaz de comunicar los valores de la
             misma, es
@@ -61,17 +62,17 @@
     </div>
   </div>
 
-  <div class="row g-0">
-    <div lc-helper="background" class="col-lg-6"
-      style="min-height: 45vh; background-size: cover;background-position: center;">
+  <div class="row g-0" id="separation-categories">
+    <div lc-helper="background" class="col-lg-6">
       <app-carrousel-voice-over></app-carrousel-voice-over>
 
     </div>
     <div class="col-lg-6 my-auto px-5 py-5">
       <div class="lc-block">
         <div editable="rich">
-          <h3>Voice Over / Acting</h3>
-          <p class="lead fst-italic fs-6">Una voz que interprete el alma de un personaje, o un relato para una pieza
+          <h3 class="title-categories">Voice Over / Acting</h3>
+          <p class="lead fst-italic" id="title-description">Una voz que interprete el alma de un personaje, o un
+            relato para una pieza
             documental, tiene que ser en sí un actor. La
             actuación de voz es uno de los desafíos más importantes que encara el profesional de la voz, y por tanto, de
             los más

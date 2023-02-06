@@ -1,1 +1,26 @@
 /* -------  MEDIA QUERY  ---------- */
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  #separation-categories {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  #title-section {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  .title-categories {
+    font-size: 55px;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  #title-description {
+    font-size: 35px;
+  }
+}

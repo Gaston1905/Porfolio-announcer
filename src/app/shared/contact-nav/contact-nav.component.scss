@@ -2,18 +2,19 @@ svg,
 i {
   font-size: 2em;
   margin: 0.5em 0 0.5em 0;
+  color: #e9b827;
   filter: drop-shadow(0 1px 4px #000000);
 }
 
-svg:hover,
 i:hover {
   color: white;
+  transform: scale(2);
 }
 
 #background {
   display: flex;
   flex-direction: column;
-  background-color: #e7eb00;
+  background-color: #e9b827;
   width: 3em;
   position: fixed;
   top: 34.1%;
