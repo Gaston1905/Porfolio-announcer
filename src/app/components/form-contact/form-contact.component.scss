@@ -31,9 +31,16 @@ textarea:focus {
 @media (min-width: 2560px) and (max-width: 3000px) {
   #background-name {
     font-size: 80px;
-    margin-right: 330px;
+    margin-right: 180px;
     padding: 10px 15px;
     text-shadow: 0.5px 0.5px 28px #000000;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3000px) {
+  #form-contact-name {
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
