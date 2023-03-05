@@ -1,6 +1,11 @@
 button:hover {
-  color: #e7eb00;
+  color: #ebc553;
   filter: drop-shadow(0 0 2px rgb(224, 236, 1));
+}
+
+p,
+.bi-globe2 {
+  color: #e9b827;
 }
 
 /*------MEDIA QUERY------*/
@@ -9,5 +14,12 @@ button:hover {
   p {
     font-size: 30px;
     margin-top: -70px;
+  }
+}
+
+@media (min-width: 1246px) and (max-width: 1440px) {
+  p {
+    font-size: 20px;
+    width: 150px;
   }
 }

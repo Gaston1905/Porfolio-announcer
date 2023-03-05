@@ -1,14 +1,24 @@
+#container-projects {
+  padding-top: 25vh;
+  padding-bottom: 5vh;
+}
+
 iframe {
   border-radius: 15px;
 }
 
-#separation-categories {
-  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
+.separator-text-card-yellow {
+  height: 7px;
+  width: 657px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 44px;
+  border-radius: 50px;
+  background-color: #e9b827;
 }
 
 .title-categories {
   margin: 0 40px;
-  margin-bottom: 40px;
 }
 
 #title-description {
@@ -22,55 +32,73 @@ iframe {
 .background-commercial {
   padding: 25px 25px;
   border-radius: 15px;
-  background: linear-gradient(292deg, #d3d3d3 55%, #3a3a3a 50%);
+  // background: linear-gradient(292deg, #d3d3d3 55%, #3a3a3a 50%);
   color: #ffffff;
 }
 
 .text-background-commercial {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #3a3a3a;
+  background-color: #2e2e29;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
 }
 
 .background-dubbing {
   padding: 25px 25px;
-  border-radius: 15px;
-  background: linear-gradient(292deg, #d3d3d3 37%, #3a3a3a 10%);
+  // border-radius: 15px;
+  // background: linear-gradient(292deg, #d3d3d3 37%, #3a3a3a 10%);
   color: #ffffff;
 }
 
 .text-background-dubbing {
   padding-top: 40px;
   padding-bottom: 40px;
-  border-radius: 15px;
-  background-color: #3a3a3a;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #2e2e29;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
 }
 
 .background-institutional {
   padding: 25px 25px;
   border-radius: 15px;
-  background: linear-gradient(292deg, #d3d3d3 80%, #3a3a3a 20%);
+  // background: linear-gradient(292deg, #d3d3d3 80%, #3a3a3a 20%);
   color: #ffffff;
 }
 
 .text-background-institutional {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #3a3a3a;
+  background-color: #2e2e29;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
 }
 
 .background-acting {
   padding: 25px 25px;
   border-radius: 15px;
-  background: linear-gradient(292deg, #d3d3d3 37%, #3a3a3a 10%);
+  // background: linear-gradient(292deg, #d3d3d3 37%, #3a3a3a 10%);
   color: #ffffff;
 }
 
 .text-background-acting {
   padding-top: 40px;
   padding-bottom: 40px;
-  border-radius: 15px;
-  background-color: #3a3a3a;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #2e2e29;
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
+}
+
+.linea {
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  border: none;
+  transition: width 0.5s ease-in-out;
 }
 
 /* -------  MEDIA QUERY  ---------- */
@@ -97,5 +125,80 @@ iframe {
 @media (min-width: 2560px) and (max-width: 3000px) {
   #title-description {
     font-size: 35px;
+  }
+}
+
+@media (min-width: 1246px) and (max-width: 1440px) {
+  #container-projects {
+    padding-top: 18vh;
+    padding-bottom: 18vh;
+  }
+  #title-section {
+    font-size: 50px;
+  }
+  #separation-categories {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .separator-text-card-yellow {
+    width: 420px;
+  }
+  .text-background-commercial,
+  .text-background-dubbing,
+  .text-background-institutional,
+  .text-background-acting {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .title-categories {
+    font-size: 1.5rem;
+  }
+  #title-description {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1245px) {
+  .separator-text-card-yellow {
+    width: 250px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+  .text-background-commercial,
+  .text-background-dubbing,
+  .text-background-institutional,
+  .text-background-acting {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .title-categories {
+    font-size: 1.25rem;
+  }
+  #title-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .separator-text-card-yellow {
+    width: 200px;
+  }
+  .text-background-commercial,
+  .text-background-dubbing,
+  .text-background-institutional,
+  .text-background-acting {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  iframe {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .video-shadow {
+    box-shadow: 0 -1px 6px 2px rgba(0, 0, 0, 0.7);
   }
 }

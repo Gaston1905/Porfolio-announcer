@@ -11,9 +11,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FormContactComponent } from './form-contact/form-contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LineaDirective } from './linea.directive';
 
 @NgModule({
-  declarations: [FormContactComponent, ProjectsComponent],
+  declarations: [FormContactComponent, ProjectsComponent, LineaDirective],
   imports: [
     CommonModule,
     CarrouselModule,
