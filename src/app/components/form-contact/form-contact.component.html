@@ -1,52 +1,52 @@
 <div class="pe-4" id="form-contact-name">
-  <p class="display-5 fs-1 text-end" style="margin-bottom: 18px; margin-right: 20px;"><span class="rounded p-2" id="background-name">Francisco Escobar</span></p>
+  <p class="display-5 fs-1 text-end container-text-header" style="margin-bottom: 18px; margin-right: 20px;"><span class="rounded p-2" id="background-name">Francisco Escobar</span></p>
 </div>
 
 <div class="pb-5 mb-4" id="form-query">
 
 
-  <div class="d-flex justify-content-end mt-5 mx-5">
-    <div class="rounded px-4">
+  <div class="d-flex justify-content-end mt-5 mx-5" class="container-app-form">
+    <div class="rounded px-4" class="container-form">
       <form [formGroup]="form">
         <h4 class="title text-white">{{ 'CONTACTO' | translate }}</h4>
         <p class="description fst-italic">{{ 'No dudes en contactarme si necesitas ayuda u otra pregunta' | translate}}
         </p>
-        <div>
+        <div class="container-input">
 
           <input type="text" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input"
             formControlName="name" id="name" placeholder="{{ 'Nombre' | translate }}" required>
         </div>
-        <div>
+        <div class="container-input">
           <input type="email" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input"
             formControlName="email" placeholder="Email@example.com" required>
         </div>
-        <div>
+        <div class="container-input">
           <textarea id="message" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-text-area" rows="5"
             cols="30" formControlName="message" placeholder="{{ 'Mensaje' | translate }}" required></textarea>
-        </div>
+        </div >
         <div class="flex d-flex gap-4">
           <div>
-            <button type="submit" class="btn bg-dark" (click)="contactData()">{{ 'Enviar' | translate }}</button>
+            <button type="submit" class="btn btn-submit" (click)="contactData()">{{ 'ENVIAR' | translate }}</button>
           </div>
           <div class="row " id="social-media-form">
-            <div class="col-md-3 mt-1">
+            <div class="col-md-3 mt-1 container-icon-social">
               <a href="#">
-                <i class="bi bi-linkedin text-dark" id="icon-social-media-form1" style="font-size: 25px; text-shadow: 0px 0px 4px white;"></i>
+                <i class="bi bi-linkedin" id="icon-social-media-form1"></i>
               </a>
             </div>
-            <div class="col-md-3 mt-1">
+            <div class="col-md-3 mt-1 container-icon-social">
               <a href="#">
-                <i class="bi bi-instagram text-dark" id="icon-social-media-form1" style="font-size: 25px; text-shadow: 0px 0px 4px white;"></i>
+                <i class="bi bi-instagram" id="icon-social-media-form1"></i>
               </a>
             </div>
-            <div class="col-md-3 mt-1">
+            <div class="col-md-3 mt-1 container-icon-social">
               <a href="#">
-                <i class="bi bi-facebook text-dark" id="icon-social-media-form1" style="font-size: 25px; text-shadow: 0px 0px 4px white;" ></i>
+                <i class="bi bi-facebook" id="icon-social-media-form1" ></i>
               </a>
             </div>
-            <div class="col-md-3" id="margin-icon-query">
+            <div class="col-md-3 container-icon-social icon-youtube" id="margin-icon-query">
               <a href="#">
-                <i class="bi bi-youtube text-dark" id="icon-social-media-form2" style="font-size: 30px; text-shadow: 0px 0px 4px white;"></i>
+                <i class="bi bi-youtube" id="icon-social-media-form2"></i>
               </a>
             </div>
           </div>

@@ -128,7 +128,20 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .contact {
+    background-position-y: -50px;
+  }
+}
+
+@media(min-width: 769px) and (max-width: 1023px) {
+
+  .contact {
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
   #div-query {
     margin-bottom: 0px !important;
   }
@@ -144,6 +157,12 @@ img {
   #social-media-query {
     position: absolute;
     margin-top: -3em;
+  }
+
+  .contact {
+    padding-top: 2em !important;
+    padding-bottom: 0 !important;
+    background-position-x: 0px;
   }
 }
 

@@ -221,4 +221,32 @@ iframe {
   .video-shadow {
     box-shadow: 0 -1px 6px 2px rgba(0, 0, 0, 0.7);
   }
+
+  @media (min-width: 992px) and (max-width: 1145px) {
+
+    #container-projects {
+      padding-top: 25vh !important;
+    }
+
+    .separator-text-card-yellow {
+      margin-bottom: 10px;
+    }
+
+    .title-description {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 375px) and (max-width: 424px) {
+
+    .title-categories {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    #title-description {
+      font-size: 15px;
+      line-height: 1.3;
+    }
+  }
 }
