@@ -12,12 +12,15 @@ i:hover {
 }
 
 #background {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   background-color: #e9b827;
-  width: 3em;
-  position: fixed;
-  top: 34.1%;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  // width: 3em;
+  // position: fixed;
+  // top: 34.1%;
 }
 
 /*---------- MEDIA QUERY --------------*/

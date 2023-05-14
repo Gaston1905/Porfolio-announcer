@@ -27,5 +27,63 @@
 
 .fill-animation {
   animation: fill-up 7s ease-in-out forwards;
-  filter: drop-shadow(-2px 2px 2px rgb(224, 236, 1));
+  filter: drop-shadow(-2px 2px 2px rgb(233, 176, 0));
 }
+
+.container-spinner {
+  position: absolute;
+  top: 80%;
+  left: 60.3%;
+  width: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner > div {
+  width: 20px;
+  height: 20px;
+  background-color: #e9b827;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: fuse-bouncedelay 1s infinite ease-in-out both;
+  animation: fuse-bouncedelay 1s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes fuse-bouncedelay {
+  0%, 80%, 100% {
+      -webkit-transform: scale(0)
+  }
+  40% {
+      -webkit-transform: scale(1.0)
+  }
+}
+
+@keyframes fuse-bouncedelay {
+  0%, 80%, 100% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  40% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+  }
+}
+
+// body:not(.fuse-splash-screen-hidden) {
+//   overflow: hidden;
+// }
+
+// body.fuse-splash-screen-hidden fuse-splash-screen {
+//   visibility: hidden;
+//   opacity: 0;
+// }
+

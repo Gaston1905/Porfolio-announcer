@@ -23,6 +23,7 @@ textarea:focus {
 #background-name {
   background-color: #e9b827;
   text-shadow: 0 0 4px #000000;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.3);
   color: #e9b827;
 }
 
@@ -102,11 +103,11 @@ textarea:focus {
   }
 }
 
-@media (min-width: 836px) {
-  #social-media-form {
-    visibility: hidden;
-  }
-}
+// @media (min-width: 836px) {
+//   #social-media-form {
+//     visibility: hidden;
+//   }
+// }
 
 @media (max-width: 836px) {
   #icon-social-media-form1 {

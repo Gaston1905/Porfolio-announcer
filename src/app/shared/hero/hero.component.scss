@@ -1,3 +1,18 @@
+.container-hero {
+  background: url('/assets/background-hero.jpg') center no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px 4px rgba(29, 29, 29, 0.5);
+}
+
+.container-nav {
+  display: flex;
+  margin: 0;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
 button {
   color: #e9b827;
 }
@@ -34,28 +49,49 @@ img {
 }
 
 .border-video {
-  border-bottom: 4px solid #e9b827;
-  border-left: 1px solid #e9b827;
-  filter: drop-shadow(-2px 2px 2px rgb(232, 184, 38));
+  // border-bottom: 1px solid #e9b827;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  // filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+}
+
+.video-style {
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .container {
   margin: -2.5em 0 2.3em 0;
 }
 
-#language-selector {
-  position: absolute;
-  left: 85%;
-  margin-top: -2em;
-}
+// #language-selector {
+//   margin-right: -10px;
+// }
 
 #title-hero {
-  margin-left: 50px;
+  margin-left: 35px;
+  line-height: 1;
 }
 
 #subtitle-hero {
   color: #ffffff;
-  margin-left: 50px;
+  margin-left: 35px;
+}
+
+.contact {
+  background: url(/assets/background-form-contact.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 8px 4px rgba(29, 29, 29, 0.5);
+}
+
+.projects {
+  background: url(/assets/background-projects.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 8px 4px rgba(29, 29, 29, 0.5);
 }
 
 /* ----------  MEDIA QUERY  ------------- */
@@ -130,19 +166,25 @@ img {
 }
 
 @media (min-width: 1246px) and (max-width: 1440px) {
-  #language-selector {
-    margin-left: -1.5em;
+  // #language-selector {
+  //   margin-left: -3.5em;
+  // }
+
+  .container-social-media-header {
+    visibility: hidden;
+    width: 145px;
+    margin-left: 90px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1245px) {
-  #language-selector {
-    margin-left: -2.5em;
-  }
+  // #language-selector {
+  //   margin-left: -2.5em;
+  // }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  #language-selector {
-    margin-left: -3.5em;
-  }
+  // #language-selector {
+  //   margin-left: -3.5em;
+  // }
 }
