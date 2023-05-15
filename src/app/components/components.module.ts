@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { LanguageModule } from '../language/language.module';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { VideoModule } from './video/video.module';
-
 import { ProjectsComponent } from './projects/projects.component';
 import { FormContactComponent } from './form-contact/form-contact.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,7 +14,6 @@ import { LineaDirective } from './linea.directive';
   declarations: [FormContactComponent, ProjectsComponent, LineaDirective],
   imports: [
     CommonModule,
-    VideoModule,
     ReactiveFormsModule,
     HttpClientModule,
     LanguageModule,
