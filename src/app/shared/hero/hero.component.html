@@ -34,14 +34,14 @@
       <div class="lc-block position-relative rounded-bottom video-hero border-video"
         [style.display]="showVideo ? 'block' : 'none'">
         <div class="carousel-item active ratio ratio-16x9">
-          <video #videoElement controls [src]="video.src" (load)="video.play()" class="video-style rounded-bottom" allowfullscreen>
+          <video loading="lazy" #videoElement controls [src]="video.src" (load)="video.play()" class="video-style rounded-bottom" allowfullscreen>
             <source type="video/mp4">
           </video>
         </div>
       </div>
       <div class="lc-block position-relative rounded-bottom video-hero border-video"
         [style.display]="showVideo ? 'none' : 'block'">
-        <img class="img-fluid rounded-bottom shadow"
+        <img class="img-fluid rounded-bottom shadow" loading="lazy"
           src="https://images.unsplash.com/photo-1621947081720-86970823b77a?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3840&amp;q=80">
         <i class="bi bi-play-circle-fill position-absolute top-50 start-50 translate-middle glightbox d-flex justify-content-center align-items-center"
           id="btn-play" style="font-size: 5em;" (click)="showVideo = true" (click)="play()"></i>
