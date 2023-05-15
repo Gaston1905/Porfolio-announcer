@@ -34,19 +34,19 @@
     </a> -->
 
 <div class="flex flex-column container-nav" style="margin-right: 18px;">
-    <div>
+    <div class="container-language-selector">
       <app-language-selector id="language-selector"></app-language-selector>
     </div>
 
     <div class="text-end" style="margin-left: 62px;">
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 sub2-header-links">
         <li>
-          <button type="button" class="btn" (click)='scroll(idioms)'>
+          <button type="button" class="btn btn-links" (click)='scroll(idioms)'>
             <p id="font-header"> <i class="bi bi-mic mb-2"></i>
               {{ 'LOCUCIONES' | translate }}</p>
           </button>
         </li>
-        <li><button type="button" class="btn px-2" (click)='scroll(contact)' (click)="showVideo = true">
+        <li><button type="button" class="btn px-2 btn-links" (click)='scroll(contact)' (click)="showVideo = true">
             <p id="font-header"> <i class="bi bi-envelope mb-1"></i>
               {{ 'CONTACTO' | translate }}</p>
           </button>

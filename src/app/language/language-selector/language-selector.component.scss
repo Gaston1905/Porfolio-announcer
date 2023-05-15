@@ -37,4 +37,10 @@ p,
   .btn-language {
     margin-right: 0 !important;
   }
+
+  @media (min-width: 375px) and (max-width: 425px) {
+    p {
+      font-size: 13px;
+    }
+  }
 }

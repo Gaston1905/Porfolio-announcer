@@ -26,7 +26,7 @@ svg,
 i {
   font-size: 16px;
   color: #e9b827;
-  filter: drop-shadow(0 0 0.6px rgb(224, 236, 1));
+  // filter: drop-shadow(0 0 0.6px rgb(224, 236, 1));
 }
 
 svg:hover,
@@ -273,5 +273,69 @@ img {
 
   header {
     margin-right: 55px !important;
+  }
+
+  @media (min-width: 375px) and (max-width: 425px) {
+
+    .sub2-header-links {
+      display: flex;
+      margin: 0 !important;
+      flex-direction: column;
+      /* flex-wrap: nowrap; */
+      align-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .btn-links {
+      height: 24px;
+      margin-right: -83px;
+      margin-top: -55px;
+    }
+
+    .container-header-component {
+      padding: 0 40px;
+    }
+
+    .container-language-selector {
+      margin-right: -82px;
+      margin-top: -45px;
+    }
+
+    #title-hero {
+      font-size: 30px;
+      margin-left: 5px;
+    }
+
+    #subtitle-hero {
+      font-size: 13px;
+      position: absolute;
+      top: 55px;
+      /* left: -79px; */
+      margin-left: -28px;
+      width: 174px;
+    }
+
+    #btn-play {
+      font-size: 3em !important
+    }
+
+    .container-hero {
+      padding-bottom: 0 !important
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 375px) {
+
+    .container-language-selector {
+      margin-right: 1px;
+    }
+
+    sub2-header-link {
+      padding-right: 13px;
+    }
+  }
+
+  #font-header {
+    margin-right: 4px
   }
 }
