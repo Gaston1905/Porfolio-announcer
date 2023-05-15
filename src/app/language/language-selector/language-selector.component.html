@@ -1,11 +1,11 @@
-<button type="button" class="btn flex d-flex flex-column align-items-end justify-content-between flex-wrap " *ngIf="translate.currentLang === 'es'"
+<button type="button" class="btn flex d-flex flex-column align-items-end justify-content-between flex-wrap btn-language" *ngIf="translate.currentLang === 'es'"
   (click)="changeLanguage('en')" style="margin-right: -30px;">
   <p>
     <i class="bi bi-globe2 me-1 mb-1"></i>
     Español - ES
   </p>
 </button>
-<button type="button" class="btn flex d-flex flex-column align-items-center align-items-end justify-content-between flex-wrap" *ngIf="translate.currentLang === 'en'"
+<button type="button" class="btn flex d-flex flex-column align-items-center align-items-end justify-content-between flex-wrap btn-language" *ngIf="translate.currentLang === 'en'"
   (click)="changeLanguage('es')" style="margin-right: -30px;">
   <p>
     <i class="bi bi-globe2 me-1 mb-1"></i>
