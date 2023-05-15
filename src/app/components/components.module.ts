@@ -5,7 +5,6 @@ import { LanguageModule } from '../language/language.module';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { VideoModule } from './video/video.module';
-import { CarrouselModule } from './carrousel/carrousel.module';
 
 import { ProjectsComponent } from './projects/projects.component';
 import { FormContactComponent } from './form-contact/form-contact.component';
@@ -17,7 +16,6 @@ import { LineaDirective } from './linea.directive';
   declarations: [FormContactComponent, ProjectsComponent, LineaDirective],
   imports: [
     CommonModule,
-    CarrouselModule,
     VideoModule,
     ReactiveFormsModule,
     HttpClientModule,
