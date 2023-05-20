@@ -1,4 +1,5 @@
 import { ComponentsModule } from './../components/components.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
 import { HeroComponent } from './hero/hero.component';
 import { ButtonUpComponent } from './button-up/button-up.component';
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     TranslateModule,
     HttpClientModule,
     AngularSvgIconModule.forRoot(),
+    BrowserAnimationsModule
   ],
   exports: [
     HeroComponent,

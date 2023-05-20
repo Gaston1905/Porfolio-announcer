@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
+  isPaused: boolean = false;
+  isDimmed: boolean = false;
+  isDimming: boolean = false;
+  isPlay: boolean = false;
+  isClickedPlay: boolean = false;
+
     // Variable para almacenar los observadores
     youtubeObservers: IntersectionObserver[] = [];
 
@@ -47,6 +53,14 @@ export class ProjectsComponent implements OnInit {
       console.log(embedElement)
       this.youtubeObservers.push(observer);
     });
+  }
+
+  loadBackground() {
+    this.isDimmed = true;
+    this.isPlay = true;
+    this.isPaused = false;
+    this.isDimming = false; // Asegúrate de desactivar el dimming cuando se presiona play
+    console.log('me ejecuto')
   }
 
 }

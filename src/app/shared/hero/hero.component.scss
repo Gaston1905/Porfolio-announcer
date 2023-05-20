@@ -13,6 +13,10 @@
   align-items: flex-end;
 }
 
+#font-header {
+  font-weight: 700;
+}
+
 button {
   color: #e9b827;
 }
@@ -36,6 +40,7 @@ i:hover {
 }
 
 #btn-play {
+  cursor: pointer;
   color: red;
   filter: drop-shadow(0 0 5px rgb(255, 0, 0));
 }
@@ -46,6 +51,42 @@ i:hover {
 
 img {
   filter: grayscale(100%);
+}
+
+// .dimmed {
+//   filter: brightness(0.5); /* Cambia el valor para ajustar el nivel de brillo disminuido */
+//   transition: filter 0.5s ease-in-out;
+// }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.dimmed::before {
+  content: "";
+  position: absolute;
+  height: 9999vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  animation: fade-in 0.6s ease-in-out;
+}
+
+.dimming::before {
+  /* Estilos adicionales al aplicar la clase dimming */
+  opacity: 0;
+  transition-delay: 0.5s; /* Retraso en la transición */
 }
 
 .border-video {

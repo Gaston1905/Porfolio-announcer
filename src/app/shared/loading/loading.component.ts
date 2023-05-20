@@ -1,10 +1,4 @@
-import {
-  animate,
-  style,
-  state,
-  transition,
-  trigger,
-} from '@angular/animations';
+import { animate, style, state, transition, trigger } from '@angular/animations';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -29,7 +23,7 @@ export class LoadingComponent {
   public fadeState: string = 'void';
 
   ngOnInit() {
-    this.fadeState = this.showLoading ? 'in' : 'out';
+    this.fadeState = this.showLoading ? 'void' : 'out';
   }
 
   hideLoading() {

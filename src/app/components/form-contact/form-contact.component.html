@@ -7,7 +7,7 @@
 
   <div class="d-flex justify-content-end mt-5 mx-5" class="container-app-form">
     <div class="rounded px-4" class="container-form">
-      <form [formGroup]="form">
+      <form [formGroup]="form" (submit)="contactData()">
         <h4 class="title text-white">{{ 'CONTACTO' | translate }}</h4>
         <p class="description fst-italic">{{ 'No dudes en contactarme si necesitas ayuda u otra pregunta' | translate}}
         </p>

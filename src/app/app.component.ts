@@ -1,9 +1,20 @@
+import { state, style, trigger } from '@angular/animations';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('fadeOut', [
+      state(
+        'void',
+        style({
+          opacity: 0,
+        })
+      ),
+    ]),
+  ],
 })
 export class AppComponent implements OnInit {
   @ViewChild('up', { static: false }) up: ElementRef | undefined;

@@ -1,6 +1,6 @@
-<div class="container-hero">
-  <div class="container-fluid mt-5 pt-5 container-content-hero" >
-    <header class="d-flex flex-column align-items-end">
+<div class="container-hero" [class.dimmed]="isClickedPlay" [class.dimming]="isDimming">
+  <div class="container-fluid mt-5 pt-5 container-content-hero"  >
+    <header class="d-flex flex-column align-items-end ">
       <div class="flex flex-column container-nav" style="margin-right: 18px;">
         <div class="container-language-selector">
           <app-language-selector id="language-selector"></app-language-selector>
@@ -13,7 +13,7 @@
                   {{ 'LOCUCIONES' | translate }}</p>
               </button>
             </li>
-            <li><button type="button" class="btn px-2 btn-links" (click)='scroll(contact)' (click)="showVideo = true">
+            <li><button type="button" class="btn px-2 btn-links" (click)='scroll(contact)'>
                 <p id="font-header"> <i class="bi bi-envelope mb-1"></i>
                   {{ 'CONTACTO' | translate }}</p>
               </button>
@@ -28,13 +28,13 @@
     </div>
   </div>
   <div class="row mb-4 align-items-center flex-lg-row-reverse container-header-component">
-    <div class="col-md-7 col-xl-7 mb-4 mb-lg-0 container-contact-and-video" style="margin-right: 30px;">
+    <div class="col-md-7 col-xl-7 mb-4 mb-lg-0 container-contact-and-video " style="margin-right: 30px;">
       <app-contact-nav></app-contact-nav>
       <!-- requires glightbox, please flag the option in the picostrap customizer panel-->
       <div class="lc-block position-relative rounded-bottom video-hero border-video"
         [style.display]="showVideo ? 'block' : 'none'">
         <div class="carousel-item active ratio ratio-16x9">
-          <video loading="lazy" #videoElement controls [src]="video.src" (load)="video.play()" class="video-style rounded-bottom" allowfullscreen>
+          <video loading="lazy" #videoElement controls [src]="video.src" (load)="video.play()" (play)="onVideoPlay()" (pause)="onVideoPause()" class="video-style rounded-bottom" allowfullscreen>
             <source type="video/mp4">
           </video>
         </div>
@@ -44,7 +44,7 @@
         <img class="img-fluid rounded-bottom shadow" loading="lazy"
           src="https://images.unsplash.com/photo-1621947081720-86970823b77a?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3840&amp;q=80">
         <i class="bi bi-play-circle-fill position-absolute top-50 start-50 translate-middle glightbox d-flex justify-content-center align-items-center"
-          id="btn-play" style="font-size: 5em;" (click)="showVideo = true" (click)="play()"></i>
+          id="btn-play" style="font-size: 5em;" (click)="showVideo = true" (click)="onVideoPlay()"></i>
       </div>
     </div><!-- /col -->
     <div class="col-md-4 col-xl-4 container-text-header" style="margin-right: 25px; background-color: rgba(0, 0, 0, 0.7); border-radius: 10px; border: 1px solid rgb(255, 255, 255)">
@@ -67,7 +67,7 @@
   </div>
 </div>
 
-  <div #idioms class="projects">
+  <div #idioms class="projects"  [class.dimmed]="isClickedPlay" [class.dimming]="isDimming">
     <app-projects></app-projects>
   </div>
   <div #contact class="contact py-5">

@@ -1,4 +1,4 @@
-<div class="container-fluid px-4 overflow-hidden" id="container-projects">
+<div class="container-fluid px-4 overflow-hidden" id="container-projects" [class.dimmed]="isClickedPlay">
   <h2 class="py-5 text-center text-white" #idioms id="title-section"> <span class="title-projects rounded">{{ 'LOCUCIONES' | translate}}</span></h2>
 
   <div class="row g-0 align-items-center background-commercial" id="separation-categories">
@@ -6,8 +6,10 @@
     <div lc-helper="background" class="col-lg-6 order-lg-2">
       <!-- <app-carrousel-commercial></app-carrousel-commercial> -->
       <div class="carousel-item active ratio ratio-16x9">
-        <iframe loading="lazy" class="video-shadow border-right" data-src="https://www.youtube.com/embed/2fvDFJKzhAk" allowfullscreen>
-        </iframe>
+        <span class="apply-iframe-effects" (click)="loadBackground()">
+          <iframe loading="lazy" class="video-shadow border-right" data-src="https://www.youtube.com/embed/2fvDFJKzhAk" allowfullscreen>
+          </iframe>
+        </span>
       </div>
 
     </div>
