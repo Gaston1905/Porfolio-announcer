@@ -1,7 +1,8 @@
 .container-hero {
-  background: url('/assets/background-hero.webp') center no-repeat;
+  background: url("/assets/background-hero.webp") center no-repeat;
   background-size: cover;
   padding-bottom: 100px;
+  margin-bottom: 50px;
   border-radius: 20px;
   box-shadow: 0 0 8px 4px rgba(29, 29, 29, 0.5);
 }
@@ -30,7 +31,6 @@ svg,
 i {
   font-size: 16px;
   color: #e9b827;
-  // filter: drop-shadow(0 0 0.6px rgb(224, 236, 1));
 }
 
 svg:hover,
@@ -52,11 +52,6 @@ i:hover {
 img {
   filter: grayscale(100%);
 }
-
-// .dimmed {
-//   filter: brightness(0.5); /* Cambia el valor para ajustar el nivel de brillo disminuido */
-//   transition: filter 0.5s ease-in-out;
-// }
 
 @keyframes fade-in {
   0% {
@@ -84,17 +79,14 @@ img {
 }
 
 .dimming::before {
-  /* Estilos adicionales al aplicar la clase dimming */
   opacity: 0;
   transition-delay: 0.5s; /* Retraso en la transición */
 }
 
 .border-video {
-  // border-bottom: 1px solid #e9b827;
   border-bottom: 1px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
-  // filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
 }
 
 .video-style {
@@ -106,10 +98,6 @@ img {
 .container {
   margin: -2.5em 0 2.3em 0;
 }
-
-// #language-selector {
-//   margin-right: -10px;
-// }
 
 #title-hero {
   margin-left: 35px;
@@ -123,13 +111,6 @@ img {
 
 .contact {
   background: url(/assets/background-form-contact.webp) no-repeat center;
-  background-size: cover;
-  border-radius: 20px;
-  box-shadow: 0 0 8px 4px rgba(29, 29, 29, 0.5);
-}
-
-.projects {
-  background: url(/assets/background-projects.webp) no-repeat center;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 0 0 8px 4px rgba(29, 29, 29, 0.5);
@@ -169,14 +150,7 @@ img {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .contact {
-    background-position-y: -50px;
-  }
-}
-
-@media(min-width: 769px) and (max-width: 1308px) {
-
+@media (min-width: 769px) and (max-width: 1308px) {
   .contact {
     padding-bottom: 0 !important;
   }
@@ -189,13 +163,15 @@ img {
     font-size: 16px;
     width: 220px;
   }
+
+  .projects {
+    padding-top: 0px;
+  }
 }
 
 @media (min-width: 475px) and (max-width: 768px) {
-
   .container-hero {
     padding-bottom: 10px;
-
   }
 
   .container-content-hero {
@@ -225,11 +201,19 @@ img {
     margin-right: 5px !important;
     margin-left: 19px !important;
   }
+
+  .projects {
+    padding-top: 0px;
+  }
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
   #div-query {
     margin-bottom: 0px !important;
+  }
+
+  .projects {
+    padding-top: 0px;
   }
 }
 
@@ -271,10 +255,6 @@ img {
 }
 
 @media (min-width: 1246px) and (max-width: 1440px) {
-  // #language-selector {
-  //   margin-left: -3.5em;
-  // }
-
   .container-social-media-header {
     visibility: hidden;
     width: 145px;
@@ -282,20 +262,7 @@ img {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1245px) {
-  // #language-selector {
-  //   margin-left: -2.5em;
-  // }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  // #language-selector {
-  //   margin-left: -3.5em;
-  // }
-}
-
 @media (max-width: 767px) {
-
   .container-header-component {
     display: flex;
     justify-content: center;
@@ -317,12 +284,10 @@ img {
   }
 
   @media (min-width: 375px) and (max-width: 425px) {
-
     .sub2-header-links {
       display: flex;
       margin: 0 !important;
       flex-direction: column;
-      /* flex-wrap: nowrap; */
       align-content: flex-end;
       align-items: flex-end;
     }
@@ -351,22 +316,20 @@ img {
       font-size: 13px;
       position: absolute;
       top: 55px;
-      /* left: -79px; */
       margin-left: -28px;
       width: 174px;
     }
 
     #btn-play {
-      font-size: 3em !important
+      font-size: 3em !important;
     }
 
     .container-hero {
-      padding-bottom: 0 !important
+      padding-bottom: 0 !important;
     }
   }
 
   @media (min-width: 320px) and (max-width: 375px) {
-
     .container-language-selector {
       margin-right: 1px;
     }
@@ -377,6 +340,6 @@ img {
   }
 
   #font-header {
-    margin-right: 4px
+    margin-right: 4px;
   }
 }

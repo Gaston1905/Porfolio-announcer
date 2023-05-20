@@ -126,7 +126,6 @@ textarea:focus {
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
-
   #form-contact-name {
     padding-top: 30px;
   }
@@ -144,7 +143,6 @@ textarea:focus {
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
-
   .container-app-form {
     display: flex;
     justify-content: flex-end;
@@ -172,7 +170,6 @@ textarea:focus {
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
-
   .contact {
     height: 440px;
   }
@@ -182,7 +179,6 @@ textarea:focus {
     justify-content: flex-end;
     margin-right: 40px;
   }
-
 
   .container-icon-social {
     width: 30px;
@@ -242,7 +238,6 @@ textarea:focus {
 }
 
 @media (min-width: 375px) and (max-width: 424px) {
-
   #form-contact-name {
     display: flex;
     justify-content: center;
@@ -250,78 +245,44 @@ textarea:focus {
     margin-bottom: 15px;
   }
 
- .container-text-header {
-  margin-right: 0 !important;
- }
+  .container-text-header {
+    margin-right: 0 !important;
+  }
 
- #background-name {
-  font-size: 25px;
- }
+  #background-name {
+    font-size: 25px;
+  }
 
- #social-media-form {
-  margin-top: 3px;
- }
+  #social-media-form {
+    margin-top: 3px;
+  }
 
- .container-icon-social {
-  width: 33px;
- }
+  .container-icon-social {
+    width: 33px;
+  }
 
- .title-text {
-  font-size: 18px
- }
+  .title-text {
+    font-size: 18px;
+  }
 
- .description {
-  font-size: 9px;
- }
+  .description {
+    font-size: 9px;
+  }
 
- input {
-  height: 30px;
- }
+  input {
+    height: 30px;
+  }
 
- textarea {
-  height: 80px;
- }
+  textarea {
+    height: 80px;
+  }
 
- .container-app-form {
-  display: flex;
-  justify-content: center;
+  .container-app-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon-youtube {
+    margin-top: 2px;
+  }
 }
-
-.icon-youtube {
-  margin-top: 2px;
-}
-
-}
-
-// @media (max-width: 768px) {
-//   #form-query {
-//     margin-bottom: 0 !important;
-//     margin-right: 40px;
-//     padding-bottom: 2em !important;
-//   }
-// }
-
-
-// @media (min-width: 836px) {
-//   #social-media-form {
-//     visibility: hidden;
-//   }
-// }
-
-// @media (max-width: 836px) {
-//   #icon-social-media-form1 {
-//     font-size: 22px;
-//   }
-// }
-
-// @media (max-width: 836px) {
-//   #icon-social-media-form2 {
-//     font-size: 28px;
-//   }
-// }
-
-// @media (max-width: 836px) {
-//   #margin-icon-query {
-//     margin-top: 0.13em;
-//   }
-// }
