@@ -36,15 +36,27 @@ p,
 }
 
 
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 376px) and (max-width: 768px) {
 
-  .btn-language {
-    margin-right: 0 !important;
+  .btn-language p {
+    margin-right: 33px;
   }
+
+}
+
+
 
   @media (min-width: 375px) and (max-width: 425px) {
     p {
       font-size: 13px;
     }
+
+
   }
-}
+
+  @media (max-width: 375px) {
+    .btn-language p {
+      margin-right: -55px;
+    }
+  }
+

@@ -110,7 +110,7 @@ img {
 }
 
 .contact {
-  background: url(/assets/background-form-contact.webp) no-repeat center;
+  background: url(/assets/background-form-contact.webp) no-repeat ;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 0 0 8px 4px rgba(29, 29, 29, 0.5);
@@ -326,12 +326,17 @@ img {
 
     .container-hero {
       padding-bottom: 0 !important;
+      background-position-x: 0;
     }
   }
 
   @media (min-width: 320px) and (max-width: 375px) {
     .container-language-selector {
       margin-right: 1px;
+    }
+
+    .option-nav {
+      margin-right: -1px !important;
     }
 
     sub2-header-link {
