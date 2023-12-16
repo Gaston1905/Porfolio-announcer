@@ -110,7 +110,7 @@ img {
 }
 
 .contact {
-  background: url(/assets/background-form-contact.webp) no-repeat ;
+  background: url(/assets/background-form-contact.webp) no-repeat;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 0 0 8px 4px rgba(29, 29, 29, 0.5);
@@ -277,6 +277,10 @@ img {
     margin-right: 0 !important;
     background-color: unset !important;
     border: unset !important;
+    margin-right: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
   }
 
   header {

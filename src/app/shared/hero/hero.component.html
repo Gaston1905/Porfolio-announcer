@@ -48,17 +48,17 @@
           id="btn-play" style="font-size: 5em;" (click)="showVideo = true" (click)="onVideoPlay()"></i>
       </div>
     </div><!-- /col -->
-    <div class="col-md-4 col-xl-4 container-text-header"
+    <div *ngFor="let user of userData" class="col-md-4 col-xl-4 container-text-header"
       style="margin-right: 25px; background-color: rgba(0, 0, 0, 0.7); border-radius: 10px; border: 1px solid rgb(255, 255, 255)">
       <div class="lc-block mb-3 pt-4">
         <div editable="rich">
-          <h1 class="fw-bolder display-2 text-white" id="title-hero">Francisco Escobar</h1>
+          <h1 class="fw-bolder display-2 text-white" id="title-hero">{{user.first_name}} {{user.last_name}}</h1>
         </div>
-      </div><!-- /lc-block -->
+      </div><!-- /lc-block -->.
       <!-- /lc-block -->
       <div class="lc-block mb-4">
         <div editable="rich">
-          <p class="lead fst-italic rounded" id="subtitle-hero">{{ '¿Estás buscando la voz para tus próximos proyectos?'
+          <p class="lead fst-italic rounded" id="subtitle-hero">{{ user.presentation
             | translate }}
           </p>
         </div>

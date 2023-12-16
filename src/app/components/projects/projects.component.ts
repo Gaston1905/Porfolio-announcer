@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectMock } from 'src/app/mock/project.mock';
+import { Project } from 'src/app/model/project.interface';
 
 @Component({
   selector: 'app-projects',
@@ -8,12 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
   // Variable para almacenar los observadores
   youtubeObservers: IntersectionObserver[] = [];
+  projectData: Project[] = ProjectMock;
 
   constructor() {}
 
   ngOnInit(): void {
     // Llama a la función para iniciar los observadores de intersección en el evento 'DOMContentLoaded'
     this.initializeYouTubeObservers();
+    console.log(this.projectData);
   }
 
   // Función para cargar el embebido de YouTube cuando sea visible
