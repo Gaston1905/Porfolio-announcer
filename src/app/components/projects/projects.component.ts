@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ProjectMock } from 'src/app/mock/project.mock';
 import { Project } from 'src/app/model/project.interface';
 
@@ -12,7 +13,7 @@ export class ProjectsComponent implements OnInit {
   youtubeObservers: IntersectionObserver[] = [];
   projectData: Project[] = ProjectMock;
 
-  constructor() {}
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
     // Llama a la función para iniciar los observadores de intersección en el evento 'DOMContentLoaded'
@@ -55,5 +56,10 @@ export class ProjectsComponent implements OnInit {
       console.log(embedElement);
       this.youtubeObservers.push(observer);
     });
+  }
+
+  //Forma segura de manejar URLs
+  sanitizeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

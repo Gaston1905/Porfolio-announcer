@@ -1,6 +1,6 @@
 export interface Project {
   id: number;
   description: string;
-  category: string | any[];
+  category: any[];
   link: string;
 }

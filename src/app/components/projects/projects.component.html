@@ -5,46 +5,22 @@
   <span *ngFor="let project of projectData">
 
     <span *ngIf="project.id % 2 === 0">
-      <div class="row g-0 align-items-center background-commercial" id="separation-categories">
-
-        <div lc-helper="background" class="col-lg-6 order-lg-2">
-          <!-- <app-carrousel-commercial></app-carrousel-commercial> -->
-          <div class="carousel-item active ratio ratio-16x9">
-
-            <iframe loading="lazy" class="video-shadow border-right" data-src="{{project.link}}" allowfullscreen>
-            </iframe>
-
-          </div>
-
-        </div>
-        <div class="col-lg-6 order-lg-1 text-background-commercial border-left">
-          <div class="lc-block">
-            <div editable="rich">
-              <h3 class="title-categories">{{ project.category[0] | translate }}</h3>
-              <div class="separator-text-card-yellow"></div>
-              <p class="lead fst-italic" id="title-description">{{ project.description |
-                translate }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr linea class="linea">
-    </span>
-
-    <span *ngIf="project.id % 2 !== 0">
       <div class="row g-0 align-items-center background-dubbing" id="separation-categories">
         <div lc-helper="background" class="col-lg-6">
           <!-- <app-carrousel-dubbing></app-carrousel-dubbing> -->
           <div class="carousel-item active ratio ratio-16x9">
-            <iframe loading="lazy" class=" video-shadow border-left" data-src="{{project.link}}" allowfullscreen>
+            <iframe loading="lazy" class=" video-shadow border-left" [src]="sanitizeUrl(project.link)" allowfullscreen>
             </iframe>
           </div>
         </div>
         <div class="col-lg-6 text-background-dubbing border-right">
           <div class="lc-block">
             <div editable="rich">
-              <h3 class="title-categories">{{ project.category[0] | translate }}</h3>
+              <h3 class="title-categories" *ngIf="project.category.length > 1">{{ project.category[0] | translate }}
+                | {{ project.category[1] | translate }}
+              </h3>
+              <h3 class="title-categories" *ngIf="project.category.length === 1">{{ project.category[0] | translate }}
+              </h3>
               <div class="separator-text-card-yellow"></div>
               <p class="lead fst-italic" id="title-description">{{ project.description | translate}}
               </p>
@@ -56,6 +32,40 @@
 
       <hr linea class="linea">
     </span>
+
+    <span *ngIf="project.id % 2 !== 0">
+      <div class="row g-0 align-items-center background-commercial" id="separation-categories">
+
+        <div lc-helper="background" class="col-lg-6 order-lg-2">
+          <!-- <app-carrousel-commercial></app-carrousel-commercial> -->
+          <div class="carousel-item active ratio ratio-16x9">
+
+            <iframe loading="lazy" class="video-shadow border-right" [src]="sanitizeUrl(project.link)" allowfullscreen>
+            </iframe>
+
+          </div>
+
+        </div>
+        <div class="col-lg-6 order-lg-1 text-background-commercial border-left">
+          <div class="lc-block">
+            <div editable="rich">
+              <h3 class="title-categories" *ngIf="project.category.length > 1">{{ project.category[0] | translate }}
+                | {{ project.category[1] | translate }}
+              </h3>
+              <h3 class="title-categories" *ngIf="project.category.length === 1">{{ project.category[0] | translate }}
+              </h3>
+              <div class="separator-text-card-yellow"></div>
+              <p class="lead fst-italic" id="title-description">{{ project.description |
+                translate }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr linea class="linea">
+    </span>
+
+
   </span>
 
 </div>
