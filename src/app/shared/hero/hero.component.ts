@@ -8,7 +8,7 @@ import {
   Renderer2,
 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { userMock } from 'src/app/mock/user.mock';
+import { userMock } from 'src/app/mock/user,mock';
 import { User } from 'src/app/model/user.interface';
 
 @Component({
