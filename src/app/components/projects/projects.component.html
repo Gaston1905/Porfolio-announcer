@@ -1,77 +1,39 @@
 <div class="container-fluid px-4 overflow-hidden background">
-  <h2 class="py-5 text-center text-white" #idioms id="title-section"> <span class="title-projects rounded">{{
-      'LOCUCIONES' | translate}}</span></h2>
 
-  <div id="carouselExampleControls" class="carousel slide">
+  <div id="carouselExampleControls" class="carousel slide" #idioms>
     <div class="carousel-inner">
       <span *ngFor="let project of projectData">
         <div class="carousel-item" [ngClass]="{ 'active': project['id'] === 1 }">
-          <!-- <img src="../../../assets/background-hero.webp" class="d-block w-100" alt="..."> -->
 
-          <span *ngIf="project.id % 2 !== 0">
-            <div class="row g-0 align-items-center background-commercial" id="separation-categories">
-
-              <div lc-helper="background" class="col-lg-6 order-lg-2">
-                <!-- <app-carrousel-commercial></app-carrousel-commercial> -->
-                <div class=" ratio ratio-16x9">
-
-                  <iframe loading="lazy" class="video-shadow border-right" [src]="sanitizeUrl(project.link)"
-                    allowfullscreen>
-                  </iframe>
-
-                </div>
-
-              </div>
-              <div class="col-lg-6 order-lg-1 text-background-commercial border-left">
-                <div class="lc-block">
-                  <div editable="rich">
-                    <h3 class="title-categories" *ngIf="project.category.length > 1">{{ project.category[0] | translate
-                      }}
-                      | {{ project.category[1] | translate }}
-                    </h3>
-                    <h3 class="title-categories" *ngIf="project.category.length === 1">{{ project.category[0] |
-                      translate }}
-                    </h3>
-                    <div class="separator-text-card-yellow"></div>
-                    <p class="lead fst-italic" id="title-description">{{ project.description |
-                      translate }}</p>
-                  </div>
-                </div>
+          <div class="row g-0 align-items-center text-background-card-video flex-column card-video"
+            id="separation-categories">
+            <div lc-helper="background" class="col-lg-8">
+              <div class=" ratio ratio-16x9">
+                <iframe loading="lazy" class=" video-shadow border-left" [src]="sanitizeUrl(project.link)"
+                  allowfullscreen>
+                </iframe>
               </div>
             </div>
-
-          </span>
-
-          <span *ngIf="project.id % 2 === 0">
-            <div class="row g-0 align-items-center background-dubbing " id="separation-categories">
-              <div lc-helper="background" class="col-lg-6">
-                <!-- <app-carrousel-dubbing></app-carrousel-dubbing> -->
-                <div class=" ratio ratio-16x9">
-                  <iframe loading="lazy" class=" video-shadow border-left" [src]="sanitizeUrl(project.link)"
-                    allowfullscreen>
-                  </iframe>
+            <div class="col-lg-8 text-background-card-video border-right">
+              <div class="lc-block">
+                <div editable="rich">
+                  <h3 class="title-categories" *ngIf="project.category.length > 1">{{ project.category[0] | translate
+                    }}
+                    | {{ project.category[1] | translate }}
+                  </h3>
+                  <h3 class="title-categories" *ngIf="project.category.length === 1">{{ project.category[0] |
+                    translate }}
+                  </h3>
+                  <div class="separator-text-card-yellow"></div>
+                  <p class="lead fst-italic" id="title-description">{{ project.description | translate}}
+                  </p>
                 </div>
               </div>
-              <div class="col-lg-6 text-background-dubbing border-right">
-                <div class="lc-block">
-                  <div editable="rich">
-                    <h3 class="title-categories" *ngIf="project.category.length > 1">{{ project.category[0] | translate
-                      }}
-                      | {{ project.category[1] | translate }}
-                    </h3>
-                    <h3 class="title-categories" *ngIf="project.category.length === 1">{{ project.category[0] |
-                      translate }}
-                    </h3>
-                    <div class="separator-text-card-yellow"></div>
-                    <p class="lead fst-italic" id="title-description">{{ project.description | translate}}
-                    </p>
-                  </div>
-                </div>
 
-              </div>
             </div>
+          </div>
 
-          </span>
+          <!-- </span> -->
 
         </div>
       </span>

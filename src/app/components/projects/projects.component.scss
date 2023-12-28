@@ -21,13 +21,12 @@
 }
 
 iframe {
-  border-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 .background {
-  // background: url(/assets/background-projects.webp) no-repeat center;
-  // background-size: cover;
-  padding-top: 150px;
+  padding-top: 50px;
   margin-bottom: 50px;
   // border-radius: 20px;
   // box-shadow: 0 0 8px 4px rgba(29, 29, 29, 0.5);
@@ -36,13 +35,7 @@ iframe {
 .border-right {
   border-bottom: 1px solid white;
   border-right: 1px solid white;
-  border-top: 1px solid white;
-}
-
-.border-left {
-  border-bottom: 1px solid white;
   border-left: 1px solid white;
-  border-top: 1px solid white;
 }
 
 .separator-text-card-yellow {
@@ -65,72 +58,29 @@ iframe {
   margin: 0 40px;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 100px !important;
+  height: 100px !important;
+}
+
 .video-shadow {
   box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
 }
 
-.background-commercial {
-  padding: 25px 25px;
-  border-radius: 15px;
-  // background: linear-gradient(292deg, #d3d3d3 55%, #3a3a3a 50%);
-  color: #ffffff;
-}
-
-.text-background-commercial {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #2e2e29;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
-}
-
-.background-dubbing {
+.card-video {
   padding: 25px 25px;
   // border-radius: 15px;
   // background: linear-gradient(292deg, #d3d3d3 37%, #3a3a3a 10%);
   color: #ffffff;
 }
 
-.text-background-dubbing {
+.text-background-card-video {
   padding-top: 40px;
   padding-bottom: 40px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #2e2e29;
-  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
-}
-
-.background-institutional {
-  padding: 25px 25px;
-  border-radius: 15px;
-  // background: linear-gradient(292deg, #d3d3d3 80%, #3a3a3a 20%);
-  color: #ffffff;
-}
-
-.text-background-institutional {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #2e2e29;
-  border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
-}
-
-.background-acting {
-  padding: 25px 25px;
-  border-radius: 15px;
-  // background: linear-gradient(292deg, #d3d3d3 37%, #3a3a3a 10%);
-  color: #ffffff;
-}
-
-.text-background-acting {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #2e2e29;
-  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
 }
 
 .linea {

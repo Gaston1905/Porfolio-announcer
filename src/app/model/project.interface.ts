@@ -3,4 +3,5 @@ export interface Project {
   description: string;
   category: any[];
   link: string;
+  isLoaded: boolean;
 }

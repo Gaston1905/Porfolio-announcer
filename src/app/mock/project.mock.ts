@@ -14,6 +14,7 @@ export const ProjectMock: Project[] = [
     description:
       'En este caso, el Municipio de Paraná prefirió mi voz para una campaña de concientización sobre el comportamiento vial. Al ser dirigido a todas las edades, hay que comunicar de manera fresca y cómplice, sin perder la convicción del texto. Ponte en contacto para conocer más sobre cómo podemos comunicar tu producto o empresa.',
     link: 'https://www.youtube.com/embed/5tDi2S2hsfs',
+    isLoaded: false,
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ export const ProjectMock: Project[] = [
     description:
       'Convencer al público a elegir su producto o servicio es parte del trabajo del locutor. Es el primer vendedor de la cadena. La eficacia de un buen comercial está en conectar los valores y cualidades del producto/servicio y el sentimiento o necesidades del consumidor.',
     link: 'https://www.youtube.com/embed/2fvDFJKzhAk',
+    isLoaded: false,
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const ProjectMock: Project[] = [
     description:
       'Cuando nos dirigimos a toda América latina y/o las comunidades latinas en países no hispanos, debemos comunicar versátilmente a gente de distintos países. Un experto en Español Neutro es la decisión acertada.',
     link: 'https://www.youtube.com/embed/yJerpSM8em4',
+    isLoaded: false,
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ export const ProjectMock: Project[] = [
     description:
       'La importancia de estas piezas comunicacionales radica en el cómo el público y potenciales inversionistas o clientes perciben a la empresa u organización. Por eso, una voz versátil que sea capaz de comunicar los valores de la misma, es  fundamental para este tipo trabajo. Confianza, dinamismo, efectividad… todo eso y más se puede transmitir a través de una buena interpretación.',
     link: 'https://www.youtube.com/embed/V9k3Tc5yxow',
+    isLoaded: false,
   },
   {
     id: 5,
@@ -42,5 +46,6 @@ export const ProjectMock: Project[] = [
     description:
       'Una voz que interprete el alma de un personaje, o un relato para una pieza documental, tiene que ser en sí un actor. La actuación de voz es uno de los desafíos más importantes que encara el profesional de la voz, y por tanto, de los más satisfactorios.',
     link: 'https://www.youtube.com/embed/zyMldlyzNbM',
+    isLoaded: false,
   },
 ];

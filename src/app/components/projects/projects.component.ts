@@ -17,8 +17,6 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     // Llama a la función para iniciar los observadores de intersección en el evento 'DOMContentLoaded'
-    this.initializeYouTubeObservers();
-    console.log(this.projectData);
   }
 
   // Función para cargar el embebido de YouTube cuando sea visible
@@ -51,9 +49,7 @@ export class ProjectsComponent implements OnInit {
         this.intersectionCallback.bind(this),
         { threshold: 0.1 }
       );
-      console.log(observer);
       observer.observe(embedElement);
-      console.log(embedElement);
       this.youtubeObservers.push(observer);
     });
   }
