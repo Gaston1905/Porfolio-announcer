@@ -1,12 +1,38 @@
-<div>
-  <form [formGroup]="formProject">
-    <input type="text" formControlName="link" placeholder="link">
-    <input type="text" formControlName="description" placeholder="descrition">
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">×</span>
+    </button>
+    <h4 *ngIf="!project" class="modal-title w-100 text-black" id="myModalLabel">CREAR PROYECTO</h4>
+    <h4 *ngIf="project" class="modal-title w-100 text-black" id="myModalLabel">ACTUALIZAR PROYECTO</h4>
 
-    <input type="text" formControlName="category_first" placeholder="categoria">
-    <input type="text" formControlName="category_optional" placeholder="categoria opcional">
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="formProject">
+      <div class="d-flex flex-column gap-4">
+        <div class="form-outline">
+          <input type="url" id="typeURL" class="form-control" formControlName="link" placeholder="Link" />
 
+        </div>
+        <div class="form-outline">
+          <input type="url" id="typeURL" class="form-control" formControlName="category_first"
+            placeholder="Primera categoria" />
+        </div>
+        <div class="form-outline">
+          <input type="url" id="typeURL" class="form-control" formControlName="category_optional"
+            placeholder="Categoria opcional" />
+        </div>
+        <div class="form-outline">
+          <textarea type="text" id="form75" class="form-control md-textarea" rows="7" formControlName="description"
+            placeholder="Descripción"></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" mdbBtn color="secondary" class="waves-light btn-secondary" aria-label="Close"
+      (click)="modalRef.hide()" mdbWavesEffect>CERRAR</button>
     <button *ngIf="!project" type="button" class="btn-success" (click)="clickAction('create')">CREAR</button>
     <button *ngIf="project" type="button" class="btn-success" (click)="clickAction('update')">ACTUALIZAR</button>
-  </form>
+  </div>
 </div>

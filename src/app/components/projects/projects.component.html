@@ -1,5 +1,7 @@
 <div class="container-fluid px-4 overflow-hidden background">
 
+  <button *ngIf="isLogged" type="button" class="btn btn-success" (click)="createProject()">CREAR PROYECTO</button>
+
   <div id="carouselExampleControls" class="carousel slide" #idioms>
     <div class="carousel-inner">
       <span *ngFor="let project of projectData">
@@ -10,19 +12,20 @@
 
           <div class="row g-0 align-items-center text-background-card-video flex-column" id="separation-categories">
 
-            <div class="col-lg-8 d-flex justify-content-end mb-2 gap-4">
+            <div *ngIf="isLogged" class="col-lg-8 d-flex justify-content-end mb-2 gap-4">
               <i class="bi bi-pencil-fill text-info cursor-pointer" style="font-size: 3rem;"
                 (click)="updateProject(project)"></i>
               <i class="bi bi-x-circle text-danger cursor-pointer" style="font-size: 3rem;"
                 (click)="deleteProject(project['id'])"></i>
             </div>
 
-            <div lc-helper="background" class="col-lg-8">
+            <div lc-helper="background" class="col-lg-8 px-0">
               <div class=" ratio ratio-16x9">
                 <iframe loading="lazy" class=" video-shadow" [src]="sanitizeUrl(project.link)" allowfullscreen>
                 </iframe>
               </div>
             </div>
+
             <div class="col-lg-8 text-background-card-video border-right">
               <div class="lc-block">
                 <div editable="rich">

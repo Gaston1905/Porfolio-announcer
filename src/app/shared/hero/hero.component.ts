@@ -4,7 +4,6 @@ import {
   OnInit,
   ViewChild,
   AfterViewInit,
-  HostListener,
   Renderer2,
 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';

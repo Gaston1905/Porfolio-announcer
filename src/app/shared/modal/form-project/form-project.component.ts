@@ -21,7 +21,6 @@ export class FormProjectComponent implements OnInit {
   public formProject!: FormGroup;
   constructor(
     public modalRef: MDBModalRef,
-    private modalService: MDBModalService,
     private formBuilder: FormBuilder,
     private projectService: ProjectService
   ) {}

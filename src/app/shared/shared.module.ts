@@ -16,6 +16,7 @@ import { SuccessComponent } from './modal/success/success.component';
 import { ErrorComponent } from './modal/error/error.component';
 import { FormProjectComponent } from './modal/form-project/form-project.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthModule } from '../auth/auth.module';
 
 @NgModule({
   declarations: [

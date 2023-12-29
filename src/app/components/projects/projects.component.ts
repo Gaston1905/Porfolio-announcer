@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
 import { ProjectMock } from 'src/app/mock/project.mock';
@@ -14,10 +14,14 @@ import { FormProjectComponent } from 'src/app/shared/modal/form-project/form-pro
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
+  // Variables de ingreso de datos
+  @Input() isLogged: boolean = false;
   // Variable para almacenar los observadores
   youtubeObservers: IntersectionObserver[] = [];
-  projectData: Project[] = ProjectMock;
+  // Variable para referenciar información de modal
   modalRef: MDBModalRef | null = null;
+  // Mock
+  projectData: Project[] = ProjectMock;
 
   private modalOptions = {
     backdrop: true,
@@ -51,6 +55,11 @@ export class ProjectsComponent implements OnInit {
         console.log(error);
       },
     });
+  }
+
+  //Crear proyecto
+  createProject() {
+    this.modalRef = this.modalService.show(FormProjectComponent);
   }
 
   // Actualizar proyecto
