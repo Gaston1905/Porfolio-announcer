@@ -68,27 +68,12 @@ iframe {
   box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.7);
 }
 
-.card-video {
-  padding: 25px 25px;
-  // border-radius: 15px;
-  // background: linear-gradient(292deg, #d3d3d3 37%, #3a3a3a 10%);
-  color: #ffffff;
-}
-
 .text-background-card-video {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 25px 40px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  color: #ffffff;
   background-color: #2e2e29;
-}
-
-.linea {
-  width: 0%;
-  height: 2px;
-  background-color: #ffffff;
-  border: none;
-  transition: width 0.5s ease-in-out;
 }
 
 @keyframes fade-in {
@@ -158,10 +143,7 @@ iframe {
   .separator-text-card-yellow {
     width: 420px;
   }
-  .text-background-commercial,
-  .text-background-dubbing,
-  .text-background-institutional,
-  .text-background-acting {
+  .text-background-card-video {
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -179,10 +161,7 @@ iframe {
     margin-top: 15px;
     margin-bottom: 25px;
   }
-  .text-background-commercial,
-  .text-background-dubbing,
-  .text-background-institutional,
-  .text-background-acting {
+  .text-background-card-video {
     padding-top: 12px;
     padding-bottom: 12px;
   }
@@ -211,10 +190,7 @@ iframe {
   .separator-text-card-yellow {
     width: 200px;
   }
-  .text-background-commercial,
-  .text-background-dubbing,
-  .text-background-institutional,
-  .text-background-acting {
+  .text-background-card-video {
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     border-bottom-right-radius: 15px;

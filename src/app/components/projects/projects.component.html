@@ -5,12 +5,10 @@
       <span *ngFor="let project of projectData">
         <div class="carousel-item" [ngClass]="{ 'active': project['id'] === 1 }">
 
-          <div class="row g-0 align-items-center text-background-card-video flex-column card-video"
-            id="separation-categories">
+          <div class="row g-0 align-items-center text-background-card-video flex-column" id="separation-categories">
             <div lc-helper="background" class="col-lg-8">
               <div class=" ratio ratio-16x9">
-                <iframe loading="lazy" class=" video-shadow border-left" [src]="sanitizeUrl(project.link)"
-                  allowfullscreen>
+                <iframe loading="lazy" class=" video-shadow" [src]="sanitizeUrl(project.link)" allowfullscreen>
                 </iframe>
               </div>
             </div>

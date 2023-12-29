@@ -1,7 +1,9 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ProjectMock } from 'src/app/mock/project.mock';
 import { Project } from 'src/app/model/project.interface';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-projects',
@@ -13,10 +15,25 @@ export class ProjectsComponent implements OnInit {
   youtubeObservers: IntersectionObserver[] = [];
   projectData: Project[] = ProjectMock;
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(
+    private sanitizer: DomSanitizer,
+    private projectService: ProjectService
+  ) {}
 
   ngOnInit(): void {
-    // Llama a la función para iniciar los observadores de intersección en el evento 'DOMContentLoaded'
+    this.getProjectData();
+  }
+
+  //Cargar data de los proyectos
+  getProjectData(): void {
+    this.projectService.getListProject().subscribe({
+      next: (res: Project[]) => {
+        console.log(res);
+      },
+      error: (error: HttpErrorResponse) => {
+        console.log(error);
+      },
+    });
   }
 
   // Función para cargar el embebido de YouTube cuando sea visible
