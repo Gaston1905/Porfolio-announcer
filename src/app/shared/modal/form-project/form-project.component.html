@@ -1,0 +1,11 @@
+<div>
+  <form [formGroup]="formProject">
+    <input type="text" formControlName="link" placeholder="link">
+    <input type="text" formControlName="description" placeholder="descrition">
+
+    <input type="text" formControlName="category_first" placeholder="categoria">
+    <input type="text" formControlName="category_optional" placeholder="categoria opcional">
+
+    <button type="button" class="btn-success" (click)="clickAction('create')">Enviar</button>
+  </form>
+</div>

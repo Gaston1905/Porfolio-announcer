@@ -16,8 +16,8 @@ export class ProjectService {
     return this._http.get<Project[]>(`${this.url}projects`);
   }
 
-  public createProject(payload: Project[]): Observable<Project[]> {
-    return this._http.post<Project[]>(`${this.url}/projects`, payload);
+  public createProject(payload: {}): Observable<Project[]> {
+    return this._http.post<Project[]>(`${this.url}projects`, payload);
   }
 
   public updateProject(payload: Project[], id: number): Observable<Project[]> {

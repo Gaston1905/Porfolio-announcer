@@ -11,6 +11,11 @@ import { LanguageModule } from '../language/language.module';
 import { LoadingComponent } from './loading/loading.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfirmComponent } from './modal/confirm/confirm.component';
+import { SuccessComponent } from './modal/success/success.component';
+import { ErrorComponent } from './modal/error/error.component';
+import { FormProjectComponent } from './modal/form-project/form-project.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     ContactNavComponent,
     ButtonUpComponent,
     LoadingComponent,
+    ConfirmComponent,
+    SuccessComponent,
+    ErrorComponent,
+    FormProjectComponent,
   ],
   imports: [
     CommonModule,
@@ -27,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     TranslateModule,
     HttpClientModule,
     AngularSvgIconModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     HeroComponent,

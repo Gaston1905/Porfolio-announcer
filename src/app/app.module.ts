@@ -7,10 +7,18 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserAnimationsModule, BrowserModule, AppRoutingModule, SharedModule, ComponentsModule],
+  imports: [
+    BrowserAnimationsModule,
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    ComponentsModule,
+    MDBBootstrapModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

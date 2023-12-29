@@ -1,9 +1,12 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
 import { ProjectMock } from 'src/app/mock/project.mock';
 import { Project } from 'src/app/model/project.interface';
 import { ProjectService } from 'src/app/services/project.service';
+import { ConfirmComponent } from 'src/app/shared/modal/confirm/confirm.component';
+import { FormProjectComponent } from 'src/app/shared/modal/form-project/form-project.component';
 
 @Component({
   selector: 'app-projects',
@@ -14,10 +17,24 @@ export class ProjectsComponent implements OnInit {
   // Variable para almacenar los observadores
   youtubeObservers: IntersectionObserver[] = [];
   projectData: Project[] = ProjectMock;
+  modalRef: MDBModalRef | null = null;
+
+  private modalOptions = {
+    backdrop: true,
+    keyboard: true,
+    focus: true,
+    show: false,
+    ignoreBackdropClick: false,
+    class: '',
+    containerClass: '',
+    animated: true,
+    data: {},
+  };
 
   constructor(
     private sanitizer: DomSanitizer,
-    private projectService: ProjectService
+    private projectService: ProjectService,
+    private modalService: MDBModalService
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +51,21 @@ export class ProjectsComponent implements OnInit {
         console.log(error);
       },
     });
+  }
+
+  // Actualizar proyecto
+  updateProject(project: Project) {
+    this.modalOptions.data = { project };
+    this.modalRef = this.modalService.show(
+      FormProjectComponent,
+      this.modalOptions
+    );
+  }
+
+  // Eliminar proyecto
+  deleteProject(id: number) {
+    this.modalOptions.data = { id };
+    this.modalRef = this.modalService.show(ConfirmComponent, this.modalOptions);
   }
 
   // Función para cargar el embebido de YouTube cuando sea visible

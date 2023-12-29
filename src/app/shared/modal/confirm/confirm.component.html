@@ -1,0 +1,20 @@
+<!-- <p>¿Quiere eliminar este elemento?</p>
+<button type="button" class="btn btn-success" (click)="clickAction('delete', id)">Eliminar</button> -->
+
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">×</span>
+    </button>
+
+  </div>
+  <div class="modal-body">
+    <h4 class="modal-title w-100 text-black" id="myModalLabel">¿Quiere eliminar este elemento?</h4>
+  </div>
+  <div class="modal-footer">
+    <button type="button" mdbBtn color="secondary" class="waves-light btn-secondary" aria-label="Close"
+      (click)="modalRef.hide()" mdbWavesEffect>CERRAR</button>
+    <button type="button" mdbBtn color="primary" class="relative waves-light btn-danger" mdbWavesEffect
+      (click)="clickAction('delete', id); modalRef.hide()">ELIMINAR</button>
+  </div>
+</div>
