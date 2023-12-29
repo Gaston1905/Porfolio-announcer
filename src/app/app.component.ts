@@ -1,5 +1,7 @@
 import { state, style, trigger } from '@angular/animations';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
+import { LoginComponent } from './auth/login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -17,11 +19,13 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
   ],
 })
 export class AppComponent implements OnInit {
+  // Variable para referenciar información de modal
+  modalRef: MDBModalRef | null = null;
   @ViewChild('up', { static: false }) up: ElementRef | undefined;
   public showLoading: boolean;
   public fadeState = 'out';
 
-  constructor() {
+  constructor(private modalService: MDBModalService) {
     this.showLoading = false;
   }
 
@@ -55,5 +59,10 @@ export class AppComponent implements OnInit {
 
   scroll(el: ElementRef) {
     el.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // llamada al modal de login
+  public login() {
+    this.modalRef = this.modalService.show(LoginComponent);
   }
 }
