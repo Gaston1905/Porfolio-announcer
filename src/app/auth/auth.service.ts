@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -18,10 +18,30 @@ export class AuthService implements OnInit {
     return this._http.post<any>(`${this.url}login`, payload);
   }
 
-  setToken(token: string) {
-    this.cookies.set('token', token);
+  logout(token: any) {
+    // Configurar los encabezados directamente en la solicitud HTTP
+    console.log(token);
+    // Utilizar replace() para eliminar las comillas al principio y al final del token
+    const parsedToken = JSON.parse(token).replace(/^"|"$/g, '');
+
+    let headers = new HttpHeaders();
+    headers = headers.set('Authorization', 'Bearer ' + parsedToken);
+    console.log(headers);
+
+    return this._http.post<any>(`${this.url}logout`, {}, { headers });
   }
+
+  setToken(token: string) {
+    const tokenJson = JSON.stringify(token);
+    this.cookies.set('token_announcer', tokenJson);
+  }
+
   getToken() {
-    return this.cookies.get('token');
+    console.log(this.cookies.get('token'));
+    return this.cookies.get('token_announcer');
+  }
+
+  removeToken() {
+    this.cookies.delete('token_announcer');
   }
 }

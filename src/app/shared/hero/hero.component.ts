@@ -7,6 +7,7 @@ import {
   Renderer2,
 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { AuthService } from 'src/app/auth/auth.service';
 import { userMock } from 'src/app/mock/user,mock';
 import { User } from 'src/app/model/user.interface';
 
@@ -25,6 +26,7 @@ export class HeroComponent implements OnInit, AfterViewInit {
   isPlay: boolean = false;
   isClickedPlay: boolean = false;
   userData: User[] = userMock;
+  isLogged: boolean = false;
 
   scroll(el: HTMLElement) {
     el.scrollIntoView();
@@ -32,7 +34,8 @@ export class HeroComponent implements OnInit, AfterViewInit {
 
   constructor(
     private translate: TranslateService,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private authService: AuthService
   ) {
     translate.setDefaultLang('es');
     this.video = { src: '../../../assets/video/video.mp4' };
@@ -42,6 +45,12 @@ export class HeroComponent implements OnInit, AfterViewInit {
     this.renderer.listen('window', 'scroll', () => {
       this.handleScroll();
     });
+
+    const token = this.authService.getToken();
+
+    if (token) {
+      this.isLogged = true;
+    }
   }
 
   handleScroll() {

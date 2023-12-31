@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
+import { AuthService } from 'src/app/auth/auth.service';
 import { ProjectMock } from 'src/app/mock/project.mock';
 import { Project } from 'src/app/model/project.interface';
 import { ProjectService } from 'src/app/services/project.service';
@@ -38,7 +39,8 @@ export class ProjectsComponent implements OnInit {
   constructor(
     private sanitizer: DomSanitizer,
     private projectService: ProjectService,
-    private modalService: MDBModalService
+    private modalService: MDBModalService,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {

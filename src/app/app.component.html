@@ -1,7 +1,10 @@
 <span #up></span>
 <!-- <app-contact-nav></app-contact-nav> -->
 
-<i class="bi bi-lock-fill position-absolute top-0 end-0" style="font-size:2rem; cursor: pointer" (click)="login()"></i>
+<i *ngIf="!isLogged" class="bi bi-lock-fill position-absolute top-0 end-0" style="font-size:2rem; cursor: pointer"
+  (click)="login()"></i>
+<i *ngIf="isLogged" class="bi bi-unlock-fill position-absolute top-0 end-0 text-danger"
+  style="font-size:2rem; cursor: pointer" (click)="logout()"></i>
 <div class=" rounded" id="landing">
   <app-loading *ngIf="showLoading" class="loading-global" [@fadeOut]="fadeState"></app-loading>
   <router-outlet></router-outlet>

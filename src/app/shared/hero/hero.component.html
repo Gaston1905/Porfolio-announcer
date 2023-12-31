@@ -6,7 +6,7 @@
           <app-language-selector id="language-selector"></app-language-selector>
         </div>
         <div class="text-end" style="margin-left: 62px;">
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 sub2-header-links">
+          <ul class="nav mb-2 justify-content-center mb-md-0 sub2-header-links">
             <li>
               <button type="button" class="btn btn-links" (click)='scroll(idioms)'>
                 <p class="option-nav" id="font-header"> <i class="bi bi-mic mb-2"></i>
@@ -71,7 +71,7 @@
 </div>
 
 <div #idioms class="projects">
-  <app-projects></app-projects>
+  <app-projects [isLogged]="isLogged"></app-projects>
 </div>
 <div #contact class="contact py-5">
   <app-form-contact></app-form-contact>

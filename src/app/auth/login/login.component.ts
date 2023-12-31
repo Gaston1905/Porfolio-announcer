@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
       next: (res: any) => {
         console.log(res);
         this.authService.setToken(res);
+        window.location.reload();
       },
       error: (error: HttpErrorResponse) => {
         console.log(error);

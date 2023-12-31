@@ -2,6 +2,9 @@ import { state, style, trigger } from '@angular/animations';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
 import { LoginComponent } from './auth/login/login.component';
+import { AuthService } from './auth/auth.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -24,14 +27,25 @@ export class AppComponent implements OnInit {
   @ViewChild('up', { static: false }) up: ElementRef | undefined;
   public showLoading: boolean;
   public fadeState = 'out';
+  public isLogged: boolean = false;
 
-  constructor(private modalService: MDBModalService) {
+  constructor(
+    private modalService: MDBModalService,
+    private authService: AuthService,
+    private cookies: CookieService
+  ) {
     this.showLoading = false;
   }
 
   ngOnInit(): void {
     this.showLoading = true;
     this.checkRenderComplete();
+
+    const token = this.authService.getToken();
+
+    if (token) {
+      this.isLogged = true;
+    }
   }
   title = 'FranciscoEscobar';
 
@@ -64,5 +78,22 @@ export class AppComponent implements OnInit {
   // llamada al modal de login
   public login() {
     this.modalRef = this.modalService.show(LoginComponent);
+  }
+
+  // llamada al logout
+  public logout() {
+    let token = this.authService.getToken();
+    token = JSON.stringify(token);
+    this.authService.logout(token).subscribe({
+      next: (res: any) => {
+        if ((res.message = 'Successfully')) {
+          this.cookies.delete('token_announcer');
+          window.location.reload();
+        }
+      },
+      error: (error: HttpErrorResponse) => {
+        console.log(error);
+      },
+    });
   }
 }
