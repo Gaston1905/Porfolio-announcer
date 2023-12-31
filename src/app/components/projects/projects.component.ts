@@ -8,6 +8,7 @@ import { Project } from 'src/app/model/project.interface';
 import { ProjectService } from 'src/app/services/project.service';
 import { ConfirmComponent } from 'src/app/shared/modal/confirm/confirm.component';
 import { FormProjectComponent } from 'src/app/shared/modal/form-project/form-project.component';
+import { SuccessComponent } from 'src/app/shared/modal/success/success.component';
 
 @Component({
   selector: 'app-projects',

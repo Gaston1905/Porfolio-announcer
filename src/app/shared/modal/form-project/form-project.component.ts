@@ -10,6 +10,8 @@ import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
 import { Observable, of, switchMap } from 'rxjs';
 import { Project } from 'src/app/model/project.interface';
 import { ProjectService } from 'src/app/services/project.service';
+import { SuccessComponent } from '../success/success.component';
+import { ErrorComponent } from '../error/error.component';
 
 @Component({
   selector: 'app-form-project',
@@ -19,10 +21,24 @@ import { ProjectService } from 'src/app/services/project.service';
 export class FormProjectComponent implements OnInit {
   public project: Project | null = null;
   public formProject!: FormGroup;
+
+  private modalOptions = {
+    backdrop: true,
+    keyboard: true,
+    focus: true,
+    show: false,
+    ignoreBackdropClick: false,
+    class: '',
+    containerClass: '',
+    animated: true,
+    data: {},
+  };
+
   constructor(
     public modalRef: MDBModalRef,
     private formBuilder: FormBuilder,
-    private projectService: ProjectService
+    private projectService: ProjectService,
+    private modalService: MDBModalService
   ) {}
 
   ngOnInit(): void {
@@ -57,7 +73,6 @@ export class FormProjectComponent implements OnInit {
         this.createProject();
         break;
       case 'update':
-        console.log('aca');
         this.updateProject();
         break;
       default:
@@ -72,10 +87,20 @@ export class FormProjectComponent implements OnInit {
         console.log(payload);
         this.projectService.createProject(payload).subscribe({
           next: (res: any) => {
-            console.log(res);
+            const response = res.message;
+            this.modalOptions.data = { response };
+            this.modalRef = this.modalService.show(
+              SuccessComponent,
+              this.modalOptions
+            );
           },
           error: (error: HttpErrorResponse) => {
-            console.log(error);
+            const response = error.error.error;
+            this.modalOptions.data = { response };
+            this.modalRef = this.modalService.show(
+              ErrorComponent,
+              this.modalOptions
+            );
           },
         });
       },
@@ -93,10 +118,20 @@ export class FormProjectComponent implements OnInit {
         console.log(payload);
         this.projectService.updateProject(payload, payload.id).subscribe({
           next: (res: any) => {
-            console.log(res);
+            const response = res.message;
+            this.modalOptions.data = { response };
+            this.modalRef = this.modalService.show(
+              SuccessComponent,
+              this.modalOptions
+            );
           },
           error: (error: HttpErrorResponse) => {
-            console.log(error);
+            const response = error.error.error;
+            this.modalOptions.data = { response };
+            this.modalRef = this.modalService.show(
+              ErrorComponent,
+              this.modalOptions
+            );
           },
         });
       },

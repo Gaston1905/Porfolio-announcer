@@ -34,7 +34,6 @@ export class AuthService implements OnInit {
   }
 
   getToken() {
-    console.log(this.cookies.get('token'));
     return this.cookies.get('token_announcer');
   }
 

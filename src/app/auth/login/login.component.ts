@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         const userData = JSON.stringify(res[1]);
         sessionStorage.setItem('userData', userData);
         this.userService.setUserData(userData);
-        // window.location.reload();
+        window.location.reload();
       },
       error: (error: HttpErrorResponse) => {
         console.log(error);
