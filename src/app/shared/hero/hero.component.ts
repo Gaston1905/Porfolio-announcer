@@ -8,8 +8,6 @@ import {
 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from 'src/app/auth/auth.service';
-import { userMock } from 'src/app/mock/user,mock';
-import { User } from 'src/app/model/user.interface';
 
 @Component({
   selector: 'app-hero',
@@ -25,8 +23,15 @@ export class HeroComponent implements OnInit, AfterViewInit {
   isDimming: boolean = false;
   isPlay: boolean = false;
   isClickedPlay: boolean = false;
-  userData: User[] = userMock;
+  // userData: User[] = userMock;
   isLogged: boolean = false;
+  // Declaramos las variables de almacenamiento de datos de sesion de usuario
+  sessionUserData: any;
+  public userData: any[] = [];
+  // Declarar las variables de datos de usuario
+  public nameUser: string = '';
+  public lastNameUser: string = '';
+  public descriptionUser: string = '';
 
   scroll(el: HTMLElement) {
     el.scrollIntoView();
@@ -39,6 +44,15 @@ export class HeroComponent implements OnInit, AfterViewInit {
   ) {
     translate.setDefaultLang('es');
     this.video = { src: '../../../assets/video/video.mp4' };
+
+    // Recuperamos los datos del usuario
+    this.sessionUserData = sessionStorage.getItem('userData');
+    const data = [JSON.parse(this.sessionUserData)]; // Convertir a array
+    this.userData = [data[0]];
+    // Asignamos los valores de datos de usuario
+    this.nameUser = this.userData[0]?.name;
+    this.lastNameUser = this.userData[0]?.last_name;
+    this.descriptionUser = this.userData[0]?.user_description;
   }
 
   ngOnInit(): void {

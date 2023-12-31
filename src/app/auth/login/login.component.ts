@@ -8,6 +8,7 @@ import {
 import { AuthService } from '../auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MDBModalRef } from 'angular-bootstrap-md';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    public modalRef: MDBModalRef
+    public modalRef: MDBModalRef,
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {
@@ -37,9 +39,11 @@ export class LoginComponent implements OnInit {
     console.log(payload);
     this.authService.login(payload).subscribe({
       next: (res: any) => {
-        console.log(res);
-        this.authService.setToken(res);
-        window.location.reload();
+        this.authService.setToken(res[0]);
+        const userData = JSON.stringify(res[1]);
+        sessionStorage.setItem('userData', userData);
+        this.userService.setUserData(userData);
+        // window.location.reload();
       },
       error: (error: HttpErrorResponse) => {
         console.log(error);

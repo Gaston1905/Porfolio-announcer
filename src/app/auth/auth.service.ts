@@ -19,14 +19,11 @@ export class AuthService implements OnInit {
   }
 
   logout(token: any) {
-    // Configurar los encabezados directamente en la solicitud HTTP
-    console.log(token);
     // Utilizar replace() para eliminar las comillas al principio y al final del token
     const parsedToken = JSON.parse(token).replace(/^"|"$/g, '');
-
+    // Configuración de header
     let headers = new HttpHeaders();
     headers = headers.set('Authorization', 'Bearer ' + parsedToken);
-    console.log(headers);
 
     return this._http.post<any>(`${this.url}logout`, {}, { headers });
   }

@@ -1,6 +1,6 @@
 <div class="pe-4" id="form-contact-name">
   <p class="display-5 fs-1 text-end container-text-header" style="margin-bottom: 18px; margin-right: 20px;"><span
-      class="rounded p-2" id="background-name">Francisco Escobar</span></p>
+      class="rounded p-2" id="background-name">{{nameUser}} {{lastNameUser}}</span></p>
 </div>
 
 <div class="pb-5 mb-4" id="form-query">
@@ -31,22 +31,22 @@
           </div>
           <div class="row " id="social-media-form">
             <div class="col-md-3 mt-1 container-icon-social">
-              <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/franciscoescobarlocutor">
+              <a target="_blank" rel="noopener" [href]="urlLinkedin">
                 <i class="bi bi-linkedin" id="icon-social-media-form1"></i>
               </a>
             </div>
             <div class="col-md-3 mt-1 container-icon-social">
-              <a target="_blank" rel="noopener" href="https://instagram.com/franciscoescobar.voz">
+              <a target="_blank" rel="noopener" [href]="urlInstagram">
                 <i class="bi bi-instagram" id="icon-social-media-form1"></i>
               </a>
             </div>
             <div class="col-md-3 mt-1 container-icon-social">
-              <a target="_blank" rel="noopener" href="https://www.facebook.com/FranEscobarLocutor">
+              <a target="_blank" rel="noopener" [href]="urlFacebook">
                 <i class="bi bi-facebook" id="icon-social-media-form1"></i>
               </a>
             </div>
             <div class="col-md-3 container-icon-social icon-youtube" id="margin-icon-query">
-              <a target="_blank" rel="noopener" href="https://www.youtube.com/@franescobarlocutor">
+              <a target="_blank" rel="noopener" [href]="urlYoutube">
                 <i class="bi bi-youtube" id="icon-social-media-form2"></i>
               </a>
             </div>
